@@ -11,6 +11,9 @@ body {
 
 .l-header {
   width: 100%;
+  color: #707070;
+  position: relative;
+  z-index: 10;
 }
 @media (min-width: 1025px) {
   .l-header {
@@ -32,7 +35,8 @@ body {
 }
 
 .l-header__logo {
-  color: #707070;
+  font-family: "Roboto";
+  font-size: 2.5rem;
 }
 @media (min-width: 1025px) {
   .l-header__logo {
@@ -50,13 +54,47 @@ body {
     width: 20%;
   }
 }
+.l-header__menu h2 {
+  margin-top: 5.125rem;
+  font-family: "Roboto";
+  font-size: 1.25rem;
+}
+@media (min-width: 600px) {
+  .l-header__menu h2 {
+    font-size: 2.125rem;
+  }
+}
+
+.l-header__menu h2, .l-header__item {
+  margin-left: 12%;
+}
+
+.l-header__list {
+  margin-top: 80px;
+}
+
+.l-header__item {
+  font-family: "M+ 1m";
+  font-size: 1.5rem;
+  line-height: 85px;
+}
+.l-header__item > a {
+  font-weight: bold;
+}
+
+.l-header__subList {
+  display: block;
+  margin-left: 18%;
+  font-size: 1.25rem;
+  line-height: 43px;
+}
 
 .l-main {
-  height: 100%;
+  position: absolute;
+  width: 100%;
 }
 @media (min-width: 1025px) {
   .l-main {
-    position: absolute;
     top: 217px;
   }
 }
@@ -91,6 +129,11 @@ body {
     margin-top: 5.375rem;
     margin-right: 1.9375rem;
   }
+}
+
+.p-main-visual {
+  height: 530px;
+  background-image: url(../../../images/index_pagetop.jpg);
 }
 
 /*# sourceMappingURL=style.css.map */
