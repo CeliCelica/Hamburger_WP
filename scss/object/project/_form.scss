@@ -1,0 +1,9 @@
+@use '../../foundation/base' as *;
+
+.p__form {
+    @include pc {
+        margin-top: rem(86);
+        margin-right: rem(31);
+    }; 
+
+}

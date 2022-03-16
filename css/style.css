@@ -1,3 +1,100 @@
+@charset "UTF-8";
+html {
+  height: 100%;
+}
 
+body {
+  height: 100%;
+  background-color: #FFFDFA;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "游ゴシック", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.l-header {
+  width: 100%;
+}
+@media (min-width: 1025px) {
+  .l-header {
+    display: flex;
+    height: 2626px;
+  }
+}
+
+.l-header__left {
+  background-color: #FFF7EF;
+}
+@media (min-width: 1025px) {
+  .l-header__left {
+    display: flex;
+    justify-content: space-between;
+    height: 217px;
+    width: 80%;
+  }
+}
+
+.l-header__logo {
+  color: #707070;
+}
+@media (min-width: 1025px) {
+  .l-header__logo {
+    font-size: 4rem;
+    margin-top: 4.1875rem;
+    margin-left: 4.0625rem;
+  }
+}
+
+.l-header__menu {
+  background-color: #F2EDE9;
+}
+@media (min-width: 1025px) {
+  .l-header__menu {
+    width: 20%;
+  }
+}
+
+.l-main {
+  height: 100%;
+}
+@media (min-width: 1025px) {
+  .l-main {
+    position: absolute;
+    top: 217px;
+  }
+}
+
+.l-footer {
+  width: 100%;
+  background-image: url(../../images/common/footer_bg.png);
+  color: #fff;
+  text-align: center;
+  font-family: "M+ 1m";
+}
+.l-footer ul {
+  height: 108px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+.l-footer ul li {
+  padding: 0 15px;
+}
+.l-footer ul li:first-of-type {
+  border-right: solid 2px #fff;
+}
+.l-footer p {
+  font-size: 0.875rem;
+}
+@media (min-width: 1025px) {
+  .l-footer {
+    height: 9.375rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .p__form {
+    margin-top: 5.375rem;
+    margin-right: 1.9375rem;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

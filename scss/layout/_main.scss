@@ -1,0 +1,8 @@
+@use '../foundation/base' as *;
+.l-main {
+    height: 100%;
+    @include pc {
+        position: absolute;
+        top: 217px;
+    };
+}

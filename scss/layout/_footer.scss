@@ -1,0 +1,27 @@
+@use '../foundation/base' as *;
+.l-footer {
+    width: 100%;
+    background-image: url(../../images/common/footer_bg.png);
+    color: #fff;
+    text-align: center;
+    font-family: $fontM1;
+    ul {
+        height: 108px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: rem(20);
+        li {
+            padding: 0 15px;
+            &:first-of-type {
+                border-right: solid 2px #fff;
+            }
+        }
+    }
+    p {
+        font-size: rem(14);
+    }
+    @include pc {
+        height: rem(150);
+    };
+}

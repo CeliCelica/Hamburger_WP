@@ -1,0 +1,36 @@
+// レスポンシブ
+$tab: 600px;
+$pc: 1025px;
+@mixin tab {
+    @media (min-width: ($tab)) {
+        @content;
+    }
+}
+@mixin pc {
+    @media (min-width: ($pc)) {
+      @content;
+    }
+}
+
+// px数値入力でrem数値
+@function rem($px) {
+    @return ($px / 16) * 1rem;
+}
+
+//カラー
+$gray: #707070;
+$brown: #3C2A10;
+
+// フォント
+$fontRobo: 'Roboto';
+$fontM1: 'M+ 1m';
+
+// サイト全体の初期設定
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-color: #FFFDFA;
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}

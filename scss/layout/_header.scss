@@ -1,0 +1,34 @@
+@use '../foundation/base' as *;
+
+.l-header  {
+    width: 100%;
+    @include pc {
+        display: flex;
+        height: 2626px;
+    }; 
+}
+.l-header__left {
+    background-color: #FFF7EF;
+    @include pc {
+        display: flex;
+        justify-content: space-between;
+        height: 217px;
+        width: 80%;
+    }; 
+}
+.l-header__logo {
+    color: $gray;
+    @include pc {
+        font-size: rem(64);
+        margin-top: rem(67);
+        margin-left: rem(65);
+    }; 
+}
+.l-header__menu {
+    background-color: #F2EDE9;
+    @include pc {
+        width: 20%;
+    }; 
+
+}
+
