@@ -1,67 +1,24 @@
 @use '../foundation/base' as *;
 
 .l-header  {
+    // position: relative;
     width: 100%;
-    color: $gray;
-    position: relative;
-    z-index: 10;
-    @include pc {
-        display: flex;
-        height: 2626px;
-    }; 
-}
-.l-header__left {
+    height: 217px;
     background-color: #FFF7EF;
+    color: $gray;
     @include pc {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
         display: flex;
         justify-content: space-between;
-        height: 217px;
-        width: 80%;
     }; 
 }
 .l-header__logo {
     font-family: $fontRobo;
     font-size: rem(40);
     @include pc {
-        font-size: rem(64);
+        font-size: pcSize(64);
         margin-top: rem(67);
         margin-left: rem(65);
     }; 
-}
-.l-header__menu {
-    background-color: #F2EDE9;
-    @include pc {
-        width: 20%;
-    }; 
-    h2 {
-        margin-top: rem(82);
-        font-family: $fontRobo;
-        font-size: rem(20);
-        @include tab {
-        font-size: rem(34);
-        }; 
-    }
-}
-.l-header__menu h2, .l-header__item {
-    margin-left: 12%;
-
-}
-.l-header__list {
-    margin-top: 80px;
-}
-.l-header__item {
-    font-family: $fontM1;
-    font-size: rem(24);
-    line-height: 85px;
-    & > a {
-        font-weight: bold;
-    }
-}
-.l-header__subList {
-    display: block;
-    margin-left: 18%;
-    font-size: rem(20);
-    line-height: 43px;
-
-
 }

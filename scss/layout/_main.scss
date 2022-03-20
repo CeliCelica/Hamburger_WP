@@ -1,8 +1,72 @@
 @use '../foundation/base' as *;
+
 .l-main {
-    position: absolute;
-    width: 100%;
     @include pc {
-        top: 217px;
-    };
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }; 
+    h2 {
+        width: 100%;
+        height: 530px;
+        background-image: url(../images/index_pagetop.jpg);
+        background-position: right;
+        a {
+            display: block;
+            color: #fff;
+            font-family: $fontM1;
+            font-weight: bold;
+            font-size: rem(36);
+            @include pc {
+                padding-top: 231px;
+                padding-left: 86px;
+                font-size: rem(40);
+            };
+        }
+    }
+}
+.l-main__map {
+    margin-top: 131px;
+    position: relative;
+    width: 100%;
+    height: 649px;
+    
+    iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    div {
+        position: absolute;
+        background-color: rgba(#000,0.3);
+        width: 100%;
+        height: 649px;
+    }
+    section {
+        position: absolute;
+        width: pcSize(950);
+        height: 649px;
+        background-color: rgba(#000,0.35);
+        color: #fff;
+        font-family: $fontM1;
+        font-weight: bold;
+        h3 {
+            font-size: pcSize(36);
+            padding: 83px 0 0 pcSize(119);
+            &::after {
+                content: "";
+                display: block;
+                width: 75px;
+                height: 2px;
+                background-color: #fff;
+                position: absolute;
+                top: 189.5px;
+            }
+        }
+        p {
+            font-size: pcSize(16);
+            padding: 119px pcSize(134) 40px pcSize(119);
+            line-height: 33px;
+            text-align: justify
+        }
+    }
 }

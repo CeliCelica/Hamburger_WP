@@ -1,0 +1,9 @@
+@use '../../foundation/base' as *;
+
+.u-position__textBox {
+    position: absolute;
+    // height: 1020px;
+    width: 100%;
+    bottom: 0;
+    // overflow: auto;
+}

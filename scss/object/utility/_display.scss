@@ -1,0 +1,8 @@
+@use '../../foundation/base' as *;
+
+.u-display__article {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+}

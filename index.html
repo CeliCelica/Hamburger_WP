@@ -12,79 +12,86 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
-<body>
+<body class="container">
     <header class="l-header">
-        <div  class="l-header__left">
-            <h1 class="l-header__logo">Hamburger</h1>
-            <form class="p__form" action="サイトURL" method="get">
-                <input class="c__searchBox" type="search" name="search" placeholder="キーワード入力"/>
-                <input class="c__submitBsth" type="submit" name="submit" value="検索" />
-            </form>
-        </div>
-        <nav class="l-header__menu">
-            <h2>Menu</h2>
-            <ul class="l-header__list">
-                <li class="l-header__item"><a href="#">バーガー</a>
-                    <ul class="l-header__subList">
-                        <li><a href="#">ハンバーガー</a></li>
-                        <li><a href="#">チーズバーガー</a></li>
-                        <li><a href="#">テリヤキバーガー</a></li>
-                        <li><a href="#">アボガドバーガー</a></li>
-                        <li><a href="#">フィッシュバーガー</a></li>
-                        <li><a href="#">ベーコンバーガー</a></li>
-                        <li><a href="#">チキンバーガー</a></li>
-                    </ul>
-                </li>
-                <li class="l-header__item"><a href="#">サイド</a>
-                    <ul class="l-header__subList">
-                        <li><a href="#">ポテト</a></li>
-                        <li><a href="#">サラダ</a></li>
-                        <li><a href="#">ナゲット</a></li>
-                        <li><a href="#">コーン</a></li>
-                    </ul>
-                </li>
-                <li class="l-header__item"><a href="#">ドリンク</a>
-                    <ul class="l-header__subList">
-                        <li><a href="#">コーラ</a></li>
-                        <li><a href="#">ファンタ</a></li>
-                        <li><a href="#">オレンジ</a></li>
-                        <li><a href="#">アップル</a></li>
-                        <li><a href="#">紅茶（Ice/Hot）</a></li>
-                        <li><a href="#">コーヒー（Ice/Hot）</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
+        <h1 class="l-header__logo">Hamburger</h1>
+        <form class="p-form" action="サイトURL" method="get">
+            <input class="c-button__searchBox" type="search" name="search" placeholder="キーワード入力"/>
+            <input class="c-button__submitBsth" type="submit" name="submit" value="検索" />
+        </form>
+    </header>    
     <main class="l-main">
-        <h2 class="p-main-visual">ダミーサイト</h2>
-        <article>
-            <h3>Taken Out</h3>
-            <section class="p-home-block">
-                <h4>Taken Out</h4>
-                <p>当店のテイクアウトで利用できる商品を掲載しています</p>
-            </section>
-            <section class="p-home-block">
-                <h4>Taken Out</h4>
-                <p>当店のテイクアウトで利用できる商品を掲載しています</p>
-            </section>
-        </article>
-        <article>
-            <h3>Eat In</h3>
-            <section class="p-home-block">
-                <h4>Taken Out</h4>
-                <p>当店のテイクアウトで利用できる商品を掲載しています</p>
-            </section>
-            <section class="p-home-block">
-                <h4>Taken Out</h4>
-                <p>当店のテイクアウトで利用できる商品を掲載しています</p>
-            </section>
-        </article>
-        <!-- <div> -->
-            <!-- グーグルマップ -->
-            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754723176!2d139.74323885080574!3d35.65858048010233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1647246040063!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
-        <!-- </div> -->
+        <h2><a>ダミーサイト</a></h2>
+        <div class="u-display__article">
+            <article class="p-article__takeOut u-margin__takeOut">
+                <h3 class="c-media__mainTitle u-margin__mainTitle">Take Out</h3>
+                <div class="u-position__textBox">
+                    <section class="c-media__textBox">
+                        <h4>Take Out</h4>
+                        <p>当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています</p>
+                    </section>
+                    <section class="c-media__textBox">
+                        <h4>Take Out</h4>
+                        <p>当店のテイクアウトで利用できる商品を掲載しています</p>
+                    </section>
+                </div>
+            </article>
+            <article class="p-article__eatIn u-margin__eatIn">
+                <h3 class="c-media__mainTitle u-margin__mainTitle">Eat In</h3>
+                <div class="u-position__textBox">
+                    <section class="c-media__textBox">
+                        <h4>Eat In</h4>
+                        <p>当店のイートインで利用できる商品を掲載しています</p>
+                    </section>
+                    <section class="c-media__textBox">
+                        <h4>Eat In</h4>
+                        <p>当店のイートインで利用できる商品を掲載しています当店のイートインで利用できる商品を掲載しています当店のイートインで利用できる商品を掲載しています当店のイートインで利用できる商品を掲載しています当店のイートインで利用できる商品を掲載しています当店のイートインで利用できる商品を掲載しています当店のイートインで利用できる商品を掲載しています当店のイートインで利用できる商品を掲載しています当店のイートインで利用できる商品を掲載しています当店のイートインで利用できる商品を掲載しています当店のイートインで利用できる商品を掲載しています当店のイートインで利用できる商品を掲載しています当店のイートインで利用できる商品を掲載しています当店のイートインで利用できる商品を掲載しています</p>
+                    </section>
+                </div>
+            </article>
+        </div>
+        <div class="l-main__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754723176!2d139.74323885080574!3d35.65858048010233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1647246040063!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div><section>
+                <h3>見出しが入ります</h3>
+                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            </div></section>
+        </div>
     </main>
+    <nav class="l-sidebar">
+        <h2>Menu</h2>
+        <ul class="l-sidebar___list">
+            <li class="l-sidebar___item"><a href="#">バーガー</a>
+                <ul class="l-sidebar___subList">
+                    <li><a href="#">ハンバーガー</a></li>
+                    <li><a href="#">チーズバーガー</a></li>
+                    <li><a href="#">テリヤキバーガー</a></li>
+                    <li><a href="#">アボガドバーガー</a></li>
+                    <li><a href="#">フィッシュバーガー</a></li>
+                    <li><a href="#">ベーコンバーガー</a></li>
+                    <li><a href="#">チキンバーガー</a></li>
+                </ul>
+            </li>
+            <li class="l-sidebar___item"><a href="#">サイド</a>
+                <ul class="l-sidebar___subList">
+                    <li><a href="#">ポテト</a></li>
+                    <li><a href="#">サラダ</a></li>
+                    <li><a href="#">ナゲット</a></li>
+                    <li><a href="#">コーン</a></li>
+                </ul>
+            </li>
+            <li class="l-sidebar___item"><a href="#">ドリンク</a>
+                <ul class="l-sidebar___subList">
+                    <li><a href="#">コーラ</a></li>
+                    <li><a href="#">ファンタ</a></li>
+                    <li><a href="#">オレンジ</a></li>
+                    <li><a href="#">アップル</a></li>
+                    <li><a href="#">紅茶（Ice/Hot）</a></li>
+                    <li><a href="#">コーヒー（Ice/Hot）</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
     <footer class="l-footer">
         <ul>
             <li>ショップ情報</li>
