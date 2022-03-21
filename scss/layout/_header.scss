@@ -6,19 +6,31 @@
     height: 217px;
     background-color: #FFF7EF;
     color: $gray;
+    text-align:center;
     @include pc {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        // margin: 0 auto;
+        
+    };
+    @include header {
         grid-row: 1 / 2;
         grid-column: 1 / 2;
         display: flex;
         justify-content: space-between;
-    }; 
-}
-.l-header__logo {
-    font-family: $fontRobo;
-    font-size: rem(40);
-    @include pc {
-        font-size: pcSize(64);
-        margin-top: rem(67);
-        margin-left: rem(65);
-    }; 
+        
+    };
+    &__logo {
+        margin-top: 30px;
+        font-family: $fontRobo;
+        font-size: rem(40);
+        @include pc {
+            font-size: rem(64);
+
+        }; 
+        @include header {
+            margin-top: 67px;
+            margin-left: rem(65);
+        }; 
+    }
 }

@@ -16,22 +16,22 @@
         font-size: rem(34);
         }; 
     }
-}
-.l-sidebar___list {
-    margin-top: 80px;
-    margin-left: rem(45);
-}
-.l-sidebar___item {
-    font-family: $fontM1;
-    font-size: rem(24);
-    line-height: 85px;
-    & > a {
-        font-weight: bold;
+    &___list {
+        margin-top: 80px;
+        margin-left: rem(45);
     }
-}
-.l-sidebar___subList {
-    display: block;
-    margin-left: rem(20);
-    font-size: rem(20);
-    line-height: 43px;
+    &___item {
+        font-family: $fontM1;
+        font-size: rem(24);
+        line-height: 85px;
+        & > a {
+            font-weight: bold;
+        }
+    }
+    &___subList {
+        display: block;
+        margin-left: rem(20);
+        font-size: rem(20);
+        line-height: 43px;
+    }
 }

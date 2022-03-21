@@ -1,6 +1,7 @@
 // レスポンシブ
 $tab: 600px;
 $pc: 1025px;
+$header: 1400px;
 @mixin tab {
     @media (min-width: ($tab)) {
         @content;
@@ -8,6 +9,11 @@ $pc: 1025px;
 }
 @mixin pc {
     @media (min-width: ($pc)) {
+      @content;
+    }
+}
+@mixin header {
+    @media (min-width: ($header)) {
       @content;
     }
 }
@@ -25,6 +31,14 @@ $pc: 1025px;
     $minFontSize:round($minWidth*($fontVw /100))*1px;
     @return clamp(#{$minFontSize},#{$fontVw}vw,#{$maxFontSize});
 }
+@function tabSize($maxFont){
+    $minWidth:600;
+    $maxWidth:1025;
+    $maxFontSize:$maxFont*1px;
+    $fontVw:round($maxFont/$maxWidth*100*1000)/1000;
+    $minFontSize:round($minWidth*($fontVw /100))*1px;
+    @return clamp(#{$minFontSize},#{$fontVw}vw,#{$maxFontSize});
+}
 
 //カラー
 $gray: #707070;
@@ -36,11 +50,7 @@ $fontRobo: 'Roboto';
 $fontM1: 'M+ 1m';
 
 // サイト全体の初期設定
-// html {
-//     height: 100%;
-// }
 body {
-    // height: 100%;
     background-color: #FFFDFA;
     font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     @include pc {

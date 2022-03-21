@@ -23,50 +23,62 @@
             };
         }
     }
-}
-.l-main__map {
-    margin-top: 131px;
-    position: relative;
-    width: 100%;
-    height: 649px;
-    
-    iframe {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-    div {
-        position: absolute;
-        background-color: rgba(#000,0.3);
+    &__map {
+        margin-top: 131px;
+        position: relative;
         width: 100%;
         height: 649px;
-    }
-    section {
-        position: absolute;
-        width: pcSize(950);
-        height: 649px;
-        background-color: rgba(#000,0.35);
-        color: #fff;
-        font-family: $fontM1;
-        font-weight: bold;
-        h3 {
-            font-size: pcSize(36);
-            padding: 83px 0 0 pcSize(119);
-            &::after {
-                content: "";
-                display: block;
-                width: 75px;
-                height: 2px;
-                background-color: #fff;
-                position: absolute;
-                top: 189.5px;
-            }
+        
+        iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
         }
-        p {
-            font-size: pcSize(16);
-            padding: 119px pcSize(134) 40px pcSize(119);
-            line-height: 33px;
-            text-align: justify
+        div {
+            position: absolute;
+            background-color: rgba(#000,0.3);
+            width: 100%;
+            height: 649px;
+        }
+        section {
+            position: absolute;
+            height: 649px;
+            background-color: rgba(#000,0.35);
+            color: #fff;
+            font-family: $fontM1;
+            font-weight: bold;
+            @include header {
+                width: pcSize(950);
+            }; 
+            h3 {
+                font-size: rem(36);
+                padding: 83px 0 0 42px;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 75px;
+                    height: 2px;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 189.5px;
+                }
+                @include header {
+                    padding: 83px 0 0 pcSize(119);
+
+                }; 
+
+            }
+            p {
+                font-size: rem(16);
+                line-height: 33px;
+                padding: 119px 29px 40px 42px;
+                text-align: justify;
+                @include header {
+                    padding: 119px pcSize(134) 40px pcSize(119);
+                }; 
+
+            }
         }
     }
 }
