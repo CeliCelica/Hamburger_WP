@@ -1,11 +1,18 @@
 @use '../../foundation/base' as *;
 .u-margin {
     &__takeOut{
-        margin-left: pcSize(111);
+        margin-left: tabSize(40);
+        @include pc {
+            margin-left: pcSize(111);
+        }; 
     }
     &__eatIn{
-        margin-left: pcSize(80);
-        margin-right: pcSize(112);
+        margin-left: tabSize(41);
+        margin-right: tabSize(40);
+        @include pc {
+            margin-left: pcSize(80);
+            margin-right: pcSize(112);
+        }; 
     }
     &__mainTitle {
         margin-top: rem(24);

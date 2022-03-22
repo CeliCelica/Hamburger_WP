@@ -1,6 +1,7 @@
 @use '../foundation/base' as *;
 
 .l-sidebar {
+
     background-color: #F2EDE9;
     color: $gray;
     @include pc {
@@ -34,4 +35,8 @@
         font-size: rem(20);
         line-height: 43px;
     }
+    // 調整する
+    @include tab {
+        display: none;
+    }; 
 }

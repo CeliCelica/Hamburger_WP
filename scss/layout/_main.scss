@@ -6,20 +6,25 @@
         grid-column: 1 / 2;
     }; 
     h2 {
-        width: 100%;
-        height: 530px;
-        background-image: url(../images/index_pagetop.jpg);
+        background-image: url(../images/pagetop_tab.jpg);
         background-position: right;
+        width: 100%;
+        height: 285px;
+        @include pc {
+            height: 530px;
+            background-image: url(../images/pagetop_pc.jpg);
+        };
         a {
             display: block;
             color: #fff;
             font-family: $fontM1;
             font-weight: bold;
             font-size: rem(36);
+            padding-top: 117px;
+            padding-left: 86px;
             @include pc {
-                padding-top: 231px;
-                padding-left: 86px;
                 font-size: rem(40);
+                padding-top: 231px;
             };
         }
     }
@@ -28,6 +33,10 @@
         position: relative;
         width: 100%;
         height: 649px;
+        @include tab {
+            margin-top: 40px;
+
+        };
         
         iframe {
             position: absolute;
@@ -52,7 +61,7 @@
             }; 
             h3 {
                 font-size: rem(36);
-                padding: 83px 0 0 42px;
+                padding: tabSize(83) 0 0 42px;
 
                 &::after {
                     content: "";
@@ -61,7 +70,7 @@
                     height: 2px;
                     background-color: #fff;
                     position: absolute;
-                    top: 189.5px;
+                    top: tabSize(200);
                 }
                 @include header {
                     padding: 83px 0 0 pcSize(119);
@@ -72,7 +81,7 @@
             p {
                 font-size: rem(16);
                 line-height: 33px;
-                padding: 119px 29px 40px 42px;
+                padding: tabSize(119) 29px 40px 42px;
                 text-align: justify;
                 @include header {
                     padding: 119px pcSize(134) 40px pcSize(119);

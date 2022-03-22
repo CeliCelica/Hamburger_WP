@@ -5,6 +5,9 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        margin-top: 120px;
+        margin-top: 40px;
+        @include pc {
+            margin-top: 120px;
+        }; 
     }
 }

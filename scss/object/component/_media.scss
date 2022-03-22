@@ -15,11 +15,15 @@
         &::after {
             content: "";
             display: block;
-            width: 65px;
+            width: 36px;
             height: 3px;
             background-color: $white;
             position: absolute;
-            bottom: -35px;
+            bottom: -20px;
+            @include pc {
+                width: 65px;
+                bottom: -35px;
+            }; 
         }
     }
     &__textBox {

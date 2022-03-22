@@ -14,9 +14,14 @@ body {
 .l-header {
   width: 100%;
   height: 217px;
-  background-color: #FFF7EF;
+  background-color: pink;
   color: #707070;
   text-align: center;
+}
+@media (min-width: 600px) {
+  .l-header {
+    background-color: #FFF7EF;
+  }
 }
 @media (min-width: 1025px) {
   .l-header {
@@ -33,18 +38,19 @@ body {
   }
 }
 .l-header__logo {
-  margin-top: 30px;
+  padding-top: 40px;
   font-family: "Roboto";
   font-size: 2.5rem;
 }
 @media (min-width: 1025px) {
   .l-header__logo {
+    padding-top: 30px;
     font-size: 4rem;
   }
 }
 @media (min-width: 1400px) {
   .l-header__logo {
-    margin-top: 67px;
+    padding-top: 67px;
     margin-left: 4.0625rem;
   }
 }
@@ -56,10 +62,16 @@ body {
   }
 }
 .l-main h2 {
-  width: 100%;
-  height: 530px;
-  background-image: url(../images/index_pagetop.jpg);
+  background-image: url(../images/pagetop_tab.jpg);
   background-position: right;
+  width: 100%;
+  height: 285px;
+}
+@media (min-width: 1025px) {
+  .l-main h2 {
+    height: 530px;
+    background-image: url(../images/pagetop_pc.jpg);
+  }
 }
 .l-main h2 a {
   display: block;
@@ -67,12 +79,13 @@ body {
   font-family: "M+ 1m";
   font-weight: bold;
   font-size: 2.25rem;
+  padding-top: 117px;
+  padding-left: 86px;
 }
 @media (min-width: 1025px) {
   .l-main h2 a {
-    padding-top: 231px;
-    padding-left: 86px;
     font-size: 2.5rem;
+    padding-top: 231px;
   }
 }
 .l-main__map {
@@ -80,6 +93,11 @@ body {
   position: relative;
   width: 100%;
   height: 649px;
+}
+@media (min-width: 600px) {
+  .l-main__map {
+    margin-top: 40px;
+  }
 }
 .l-main__map iframe {
   position: absolute;
@@ -107,7 +125,7 @@ body {
 }
 .l-main__map section h3 {
   font-size: 2.25rem;
-  padding: 83px 0 0 42px;
+  padding: clamp(49px,8.098vw,83px) 0 0 42px;
 }
 .l-main__map section h3::after {
   content: "";
@@ -116,7 +134,7 @@ body {
   height: 2px;
   background-color: #fff;
   position: absolute;
-  top: 189.5px;
+  top: clamp(117px,19.512vw,200px);
 }
 @media (min-width: 1400px) {
   .l-main__map section h3 {
@@ -126,7 +144,7 @@ body {
 .l-main__map section p {
   font-size: 1rem;
   line-height: 33px;
-  padding: 119px 29px 40px 42px;
+  padding: clamp(70px,11.61vw,119px) 29px 40px 42px;
   text-align: justify;
 }
 @media (min-width: 1400px) {
@@ -173,6 +191,11 @@ body {
   margin-left: 1.25rem;
   font-size: 1.25rem;
   line-height: 43px;
+}
+@media (min-width: 600px) {
+  .l-sidebar {
+    display: none;
+  }
 }
 
 .l-footer {
@@ -246,11 +269,17 @@ body {
 .c-media__mainTitle::after {
   content: "";
   display: block;
-  width: 65px;
+  width: 36px;
   height: 3px;
   background-color: #EAEAEA;
   position: absolute;
-  bottom: -35px;
+  bottom: -20px;
+}
+@media (min-width: 1025px) {
+  .c-media__mainTitle::after {
+    width: 65px;
+    bottom: -35px;
+  }
 }
 .c-media__textBox {
   width: 94%;
@@ -278,24 +307,22 @@ body {
 }
 
 .p-article__takeOut {
-  background-image: url("../images/index_bg_TakeOut.jpg");
+  background-image: url("../images/TakeOut_bg.jpg");
   background-repeat: no-repeat;
   width: 100%;
   height: 1195px;
   position: relative;
 }
 .p-article__eatIn {
-  background-image: url("../images/index_bg_EatIn.jpg");
+  background-image: url("../images/EatIn_bg.jpg");
   background-repeat: no-repeat;
   width: 100%;
   height: 1195px;
   position: relative;
 }
 
-@media (min-width: 1025px) {
-  .p-form {
-    margin-top: 38px;
-  }
+.p-form {
+  margin-top: 38px;
 }
 @media (min-width: 1400px) {
   .p-form {
@@ -308,15 +335,31 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 120px;
+  margin-top: 40px;
+}
+@media (min-width: 1025px) {
+  .u-display__article {
+    margin-top: 120px;
+  }
 }
 
 .u-margin__takeOut {
-  margin-left: clamp(81px,7.929vw,111px);
+  margin-left: clamp(23px,3.902vw,40px);
+}
+@media (min-width: 1025px) {
+  .u-margin__takeOut {
+    margin-left: clamp(81px,7.929vw,111px);
+  }
 }
 .u-margin__eatIn {
-  margin-left: clamp(59px,5.714vw,80px);
-  margin-right: clamp(82px,8vw,112px);
+  margin-left: clamp(24px,4vw,41px);
+  margin-right: clamp(23px,3.902vw,40px);
+}
+@media (min-width: 1025px) {
+  .u-margin__eatIn {
+    margin-left: clamp(59px,5.714vw,80px);
+    margin-right: clamp(82px,8vw,112px);
+  }
 }
 .u-margin__mainTitle {
   margin-top: 1.5rem;
