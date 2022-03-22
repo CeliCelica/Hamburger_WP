@@ -89,7 +89,7 @@ body {
   }
 }
 .l-main__map {
-  margin-top: 131px;
+  margin-top: 40px;
   position: relative;
   width: 100%;
   height: 649px;
@@ -97,6 +97,13 @@ body {
 @media (min-width: 600px) {
   .l-main__map {
     margin-top: 40px;
+    height: 415px;
+  }
+}
+@media (min-width: 1025px) {
+  .l-main__map {
+    margin-top: 131px;
+    height: 649px;
   }
 }
 .l-main__map iframe {
@@ -110,6 +117,16 @@ body {
   width: 100%;
   height: 649px;
 }
+@media (min-width: 600px) {
+  .l-main__map div {
+    height: 415px;
+  }
+}
+@media (min-width: 1025px) {
+  .l-main__map div {
+    height: 649px;
+  }
+}
 .l-main__map section {
   position: absolute;
   height: 649px;
@@ -118,6 +135,16 @@ body {
   font-family: "M+ 1m";
   font-weight: bold;
 }
+@media (min-width: 600px) {
+  .l-main__map section {
+    height: 415px;
+  }
+}
+@media (min-width: 1025px) {
+  .l-main__map section {
+    height: 649px;
+  }
+}
 @media (min-width: 1400px) {
   .l-main__map section {
     width: clamp(696px,67.857vw,950px);
@@ -125,7 +152,19 @@ body {
 }
 .l-main__map section h3 {
   font-size: 2.25rem;
-  padding: clamp(49px,8.098vw,83px) 0 0 42px;
+  padding: 40px 0 0 42px;
+}
+@media (min-width: 600px) {
+  .l-main__map section h3 {
+    font-size: 1.875rem;
+    padding: clamp(23px,3.902vw,40px) 0 0 42px;
+  }
+}
+@media (min-width: 1025px) {
+  .l-main__map section h3 {
+    font-size: 2.25rem;
+    padding: 83px 0 0 clamp(87px,8.5vw,119px);
+  }
 }
 .l-main__map section h3::after {
   content: "";
@@ -134,18 +173,34 @@ body {
   height: 2px;
   background-color: #fff;
   position: absolute;
-  top: clamp(117px,19.512vw,200px);
+  top: 102px;
 }
-@media (min-width: 1400px) {
-  .l-main__map section h3 {
-    padding: 83px 0 0 clamp(87px,8.5vw,119px);
+@media (min-width: 600px) {
+  .l-main__map section h3::after {
+    top: clamp(75px, 9.951vw, 102px);
+  }
+}
+@media (min-width: 1025px) {
+  .l-main__map section h3::after {
+    top: 200px;
   }
 }
 .l-main__map section p {
   font-size: 1rem;
   line-height: 33px;
-  padding: clamp(70px,11.61vw,119px) 29px 40px 42px;
   text-align: justify;
+}
+@media (min-width: 600px) {
+  .l-main__map section p {
+    padding: clamp(23px,3.902vw,40px) clamp(17px,2.829vw,29px) 40px clamp(25px,4.098vw,42px);
+    font-size: clamp(13px, 1.366vw, 14px);
+  }
+}
+@media (min-width: 1025px) {
+  .l-main__map section p {
+    font-size: 1rem;
+    padding: 119px clamp(98px,9.571vw,134px) 40px clamp(87px,8.5vw,119px);
+  }
 }
 @media (min-width: 1400px) {
   .l-main__map section p {
@@ -156,6 +211,7 @@ body {
 .l-sidebar {
   background-color: #F2EDE9;
   color: #707070;
+  display: none;
 }
 @media (min-width: 1025px) {
   .l-sidebar {
@@ -191,11 +247,6 @@ body {
   margin-left: 1.25rem;
   font-size: 1.25rem;
   line-height: 43px;
-}
-@media (min-width: 600px) {
-  .l-sidebar {
-    display: none;
-  }
 }
 
 .l-footer {
@@ -296,6 +347,12 @@ body {
 }
 @media (min-width: 600px) {
   .c-media__textBox h4 {
+    padding: 20px 0 20px 11px;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1025px) {
+  .c-media__textBox h4 {
     padding: 17px 0 26px 19px;
     font-size: 1.5rem;
   }
@@ -303,7 +360,16 @@ body {
 .c-media__textBox p {
   font-size: 1rem;
   text-align: justify;
-  padding: 0 19px 19px 19px;
+}
+@media (min-width: 600px) {
+  .c-media__textBox p {
+    padding: 20px 11px 20px 11px;
+  }
+}
+@media (min-width: 1025px) {
+  .c-media__textBox p {
+    padding: 0 19px 20px 19px;
+  }
 }
 
 .p-article__takeOut {
