@@ -6,10 +6,16 @@
         grid-column: 1 / 2;
     }; 
     h2 {
-        background-image: url(../images/pagetop_tab.jpg);
-        background-position: right;
+        background-image: url(../images/pagetop_sp.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         width: 100%;
         height: 285px;
+        @include tab {
+            background-image: url(../images/pagetop_tab.jpg);
+            background-position: right;
+        };
         @include pc {
             height: 530px;
             background-image: url(../images/pagetop_pc.jpg);
@@ -20,8 +26,12 @@
             font-family: $fontM1;
             font-weight: bold;
             font-size: rem(36);
-            padding-top: 117px;
-            padding-left: 86px;
+            padding-top: 119px;
+            padding-left: 25px;
+            @include tab {
+                padding-top: 117px;
+                padding-left: 86px;
+            };
             @include pc {
                 font-size: rem(40);
                 padding-top: 231px;
@@ -29,10 +39,10 @@
         }
     }
     &__map {
-        margin-top: 40px;
+        margin-top: 49px;
         position: relative;
         width: 100%;
-        height: 649px;
+        height: 691px;
         @include tab {
             margin-top: 40px;
             height: 415px;
@@ -50,7 +60,7 @@
             position: absolute;
             background-color: rgba(#000,0.3);
             width: 100%;
-            height: 649px;
+            height: 415px;
             @include tab {
                 height: 415px;
             };
@@ -60,7 +70,7 @@
         }
         section {
             position: absolute;
-            height: 649px;
+            height: 691px;
             background-color: rgba(#000,0.35);
             color: #fff;
             font-family: $fontM1;
@@ -75,10 +85,9 @@
                 width: pcSize(950);
             }; 
             h3 {
-                font-size: rem(36);
+                font-size: rem(30);
                 padding: 40px 0 0 42px;
                 @include tab {
-                    font-size: rem(30);
                     padding: tabSize(40) 0 0 42px;
                 };
                 @include pc {
@@ -102,16 +111,16 @@
                 }
             }
             p {
-                font-size: rem(16);
+                font-size: rem(14);
                 line-height: 33px;
-                // padding: tabSize(119) 29px 40px 42px;
+                padding: 40px 40px 0 40px;
                 text-align: justify;
                 @include tab {
                     padding: tabSize(40) tabSize(29) 40px tabSize(42);
+                    font-size: rem(16);
                     font-size: clamp(13px,1.366vw,14px);
                 };
                 @include pc {
-                    font-size: rem(16);
                     padding: 119px pcSize(134) 40px pcSize(119);
 
                 };

@@ -23,9 +23,9 @@ $header: 1400px;
     @return ($px / 16) * 1rem;
 }
 // サイズ自動変更
-@function pcSize($maxFont){
-    $minWidth:1025;
-    $maxWidth:1400;
+@function spSize($maxFont){
+    $minWidth:320;
+    $maxWidth:600;
     $maxFontSize:$maxFont*1px;
     $fontVw:round($maxFont/$maxWidth*100*1000)/1000;
     $minFontSize:round($minWidth*($fontVw /100))*1px;
@@ -39,6 +39,15 @@ $header: 1400px;
     $minFontSize:round($minWidth*($fontVw /100))*1px;
     @return clamp(#{$minFontSize},#{$fontVw}vw,#{$maxFontSize});
 }
+@function pcSize($maxFont){
+    $minWidth:1025;
+    $maxWidth:1400;
+    $maxFontSize:$maxFont*1px;
+    $fontVw:round($maxFont/$maxWidth*100*1000)/1000;
+    $minFontSize:round($minWidth*($fontVw /100))*1px;
+    @return clamp(#{$minFontSize},#{$fontVw}vw,#{$maxFontSize});
+}
+
 
 //カラー
 $gray: #707070;

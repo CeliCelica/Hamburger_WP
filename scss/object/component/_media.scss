@@ -30,26 +30,26 @@
         width: 94%;
         height: auto;
         margin: 0 auto;
-        margin-bottom: 20px;
         color: $brown;
         font-family: $fontM1;
         background-color: rgba(#fff,0.8);
+
         h4 {
             font-weight: bold;
             font-size: rem(22);
+            padding: 19px 0 19px 10px;
             @include tab {
                 padding: 20px 0 20px 11px;
                 font-size: rem(24);
             };
             @include pc {
                 padding: 17px 0 26px 19px;
-                font-size: rem(24);
             };
         }
         p {
             font-size: rem(16);
             text-align: justify;
-            
+            padding: 0px 10px 17px 10px;
             @include tab {
                 padding: 20px 11px 20px 11px;
             };

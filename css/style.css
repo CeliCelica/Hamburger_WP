@@ -14,14 +14,9 @@ body {
 .l-header {
   width: 100%;
   height: 217px;
-  background-color: pink;
+  background-color: #FFF7EF;
   color: #707070;
   text-align: center;
-}
-@media (min-width: 600px) {
-  .l-header {
-    background-color: #FFF7EF;
-  }
 }
 @media (min-width: 1025px) {
   .l-header {
@@ -62,10 +57,18 @@ body {
   }
 }
 .l-main h2 {
-  background-image: url(../images/pagetop_tab.jpg);
-  background-position: right;
+  background-image: url(../images/pagetop_sp.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: 100%;
   height: 285px;
+}
+@media (min-width: 600px) {
+  .l-main h2 {
+    background-image: url(../images/pagetop_tab.jpg);
+    background-position: right;
+  }
 }
 @media (min-width: 1025px) {
   .l-main h2 {
@@ -79,8 +82,14 @@ body {
   font-family: "M+ 1m";
   font-weight: bold;
   font-size: 2.25rem;
-  padding-top: 117px;
-  padding-left: 86px;
+  padding-top: 119px;
+  padding-left: 25px;
+}
+@media (min-width: 600px) {
+  .l-main h2 a {
+    padding-top: 117px;
+    padding-left: 86px;
+  }
 }
 @media (min-width: 1025px) {
   .l-main h2 a {
@@ -89,10 +98,10 @@ body {
   }
 }
 .l-main__map {
-  margin-top: 40px;
+  margin-top: 49px;
   position: relative;
   width: 100%;
-  height: 649px;
+  height: 691px;
 }
 @media (min-width: 600px) {
   .l-main__map {
@@ -115,7 +124,7 @@ body {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
-  height: 649px;
+  height: 415px;
 }
 @media (min-width: 600px) {
   .l-main__map div {
@@ -129,7 +138,7 @@ body {
 }
 .l-main__map section {
   position: absolute;
-  height: 649px;
+  height: 691px;
   background-color: rgba(0, 0, 0, 0.35);
   color: #fff;
   font-family: "M+ 1m";
@@ -151,12 +160,11 @@ body {
   }
 }
 .l-main__map section h3 {
-  font-size: 2.25rem;
+  font-size: 1.875rem;
   padding: 40px 0 0 42px;
 }
 @media (min-width: 600px) {
   .l-main__map section h3 {
-    font-size: 1.875rem;
     padding: clamp(23px,3.902vw,40px) 0 0 42px;
   }
 }
@@ -186,19 +194,20 @@ body {
   }
 }
 .l-main__map section p {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 33px;
+  padding: 40px 40px 0 40px;
   text-align: justify;
 }
 @media (min-width: 600px) {
   .l-main__map section p {
     padding: clamp(23px,3.902vw,40px) clamp(17px,2.829vw,29px) 40px clamp(25px,4.098vw,42px);
+    font-size: 1rem;
     font-size: clamp(13px, 1.366vw, 14px);
   }
 }
 @media (min-width: 1025px) {
   .l-main__map section p {
-    font-size: 1rem;
     padding: 119px clamp(98px,9.571vw,134px) 40px clamp(87px,8.5vw,119px);
   }
 }
@@ -211,7 +220,6 @@ body {
 .l-sidebar {
   background-color: #F2EDE9;
   color: #707070;
-  display: none;
 }
 @media (min-width: 1025px) {
   .l-sidebar {
@@ -286,11 +294,16 @@ body {
   border-radius: 10px;
 }
 .c-button__searchBox {
-  width: 24.75rem;
+  width: 14.375rem;
   background: #fff url(../images/common/search_icon.png) no-repeat top 11px left 12px;
 }
+@media (min-width: 600px) {
+  .c-button__searchBox {
+    width: 24.75rem;
+  }
+}
 .c-button__submitButton {
-  width: 8.5rem;
+  width: 4.875rem;
   text-align: center;
   font-family: "M+ 1m";
   font-size: 16px;
@@ -299,6 +312,11 @@ body {
   background: -moz-linear-gradient(top, #F2EDE9, #DED8D3);
   background: -webkit-linear-gradient(top, #F2EDE9, #DED8D3);
   background: linear-gradient(top, #F2EDE9, #DED8D3);
+}
+@media (min-width: 600px) {
+  .c-button__submitButton {
+    width: 8.5rem;
+  }
 }
 
 .c-media__mainTitle {
@@ -336,7 +354,6 @@ body {
   width: 94%;
   height: auto;
   margin: 0 auto;
-  margin-bottom: 20px;
   color: #3C2A10;
   font-family: "M+ 1m";
   background-color: rgba(255, 255, 255, 0.8);
@@ -344,6 +361,7 @@ body {
 .c-media__textBox h4 {
   font-weight: bold;
   font-size: 1.375rem;
+  padding: 19px 0 19px 10px;
 }
 @media (min-width: 600px) {
   .c-media__textBox h4 {
@@ -354,12 +372,12 @@ body {
 @media (min-width: 1025px) {
   .c-media__textBox h4 {
     padding: 17px 0 26px 19px;
-    font-size: 1.5rem;
   }
 }
 .c-media__textBox p {
   font-size: 1rem;
   text-align: justify;
+  padding: 0px 10px 17px 10px;
 }
 @media (min-width: 600px) {
   .c-media__textBox p {
@@ -373,18 +391,32 @@ body {
 }
 
 .p-article__takeOut {
-  background-image: url("../images/TakeOut_bg.jpg");
+  background-image: url("../images/TakeOut_bg_sp.jpg");
   background-repeat: no-repeat;
-  width: 100%;
-  height: 1195px;
+  width: 335px;
+  height: 642px;
   position: relative;
 }
+@media (min-width: 600px) {
+  .p-article__takeOut {
+    background-image: url("../images/TakeOut_bg.jpg");
+    width: 100%;
+    height: 1195px;
+  }
+}
 .p-article__eatIn {
-  background-image: url("../images/EatIn_bg.jpg");
+  background-image: url("../images/EatIn_bg_sp.jpg");
   background-repeat: no-repeat;
-  width: 100%;
-  height: 1195px;
+  width: 336px;
+  height: 643px;
   position: relative;
+}
+@media (min-width: 600px) {
+  .p-article__eatIn {
+    background-image: url("../images/EatIn_bg.jpg");
+    width: 100%;
+    height: 1195px;
+  }
 }
 
 .p-form {
@@ -398,10 +430,15 @@ body {
 }
 
 .u-display__article {
-  width: 100%;
+  margin-top: 20px;
   display: flex;
-  justify-content: center;
-  margin-top: 40px;
+  flex-flow: column;
+}
+@media (min-width: 600px) {
+  .u-display__article {
+    margin-top: 40px;
+    flex-flow: nowrap;
+  }
 }
 @media (min-width: 1025px) {
   .u-display__article {
@@ -410,7 +447,12 @@ body {
 }
 
 .u-margin__takeOut {
-  margin-left: clamp(23px,3.902vw,40px);
+  margin: 0 auto;
+}
+@media (min-width: 600px) {
+  .u-margin__takeOut {
+    margin-left: clamp(23px,3.902vw,40px);
+  }
 }
 @media (min-width: 1025px) {
   .u-margin__takeOut {
@@ -418,8 +460,15 @@ body {
   }
 }
 .u-margin__eatIn {
-  margin-left: clamp(24px,4vw,41px);
-  margin-right: clamp(23px,3.902vw,40px);
+  margin: 0 auto;
+  margin-top: 20px;
+}
+@media (min-width: 600px) {
+  .u-margin__eatIn {
+    margin-top: 0px;
+    margin-left: clamp(24px,4vw,41px);
+    margin-right: clamp(23px,3.902vw,40px);
+  }
 }
 @media (min-width: 1025px) {
   .u-margin__eatIn {
@@ -428,11 +477,25 @@ body {
   }
 }
 .u-margin__mainTitle {
-  margin-top: 1.5rem;
-  margin-left: 1.375rem;
+  margin-top: 0.8125rem;
+  margin-left: 0.75rem;
+}
+@media (min-width: 600px) {
+  .u-margin__mainTitle {
+    margin-top: 1.5rem;
+    margin-left: 1.375rem;
+  }
 }
 .u-margin__searchBox {
   margin-right: 13px;
+}
+.u-margin__textBox {
+  margin-bottom: 10px;
+}
+@media (min-width: 600px) {
+  .u-margin__textBox {
+    margin-bottom: 20px;
+  }
 }
 
 .u-position__textBox {

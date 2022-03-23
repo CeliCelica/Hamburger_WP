@@ -2,20 +2,27 @@
 
 .p-article {
     &__takeOut {
-        background-image: url('../images/TakeOut_bg.jpg');
+        background-image: url('../images/TakeOut_bg_sp.jpg');
         background-repeat: no-repeat;
-        width: 100%;
-        height: 1195px;
-        // overflow: auto;
+        width: 335px;
+        height: 642px;
         position: relative;
+        @include tab {
+            background-image: url('../images/TakeOut_bg.jpg');
+            width: 100%;
+            height: 1195px;
+        }; 
     }
     &__eatIn {
-        background-image: url('../images/EatIn_bg.jpg');
+        background-image: url('../images/EatIn_bg_sp.jpg');
         background-repeat: no-repeat;
-        // background-position: right;
-        width: 100%;
-        height: 1195px;
+        width: 336px;
+        height: 643px;
         position: relative;
-        // overflow: scroll;
+        @include tab {
+            background-image: url('../images/EatIn_bg.jpg');
+            width: 100%;
+            height: 1195px;
+        }; 
     }
 }

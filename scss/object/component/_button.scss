@@ -6,11 +6,14 @@
         border-radius: 10px;
     }
     &__searchBox {
-    width: rem(396);
+    width: rem(230);
     background: #fff url(../images/common/search_icon.png) no-repeat top 11px left 12px;
+        @include tab {
+            width: rem(396);
+        }; 
     }
     &__submitButton {
-        width: rem(136);
+        width: rem(78);
         text-align: center;
         font-family: $fontM1;
         font-size: 16px;
@@ -18,7 +21,10 @@
         color: $gray;
         background: -moz-linear-gradient(top, #F2EDE9, #DED8D3);
         background: -webkit-linear-gradient(top, #F2EDE9, #DED8D3);
-        background: linear-gradient(top, #F2EDE9, #DED8D3)
+        background: linear-gradient(top, #F2EDE9, #DED8D3);
+        @include tab {
+            width: rem(136);
+        }; 
     }
 }
 

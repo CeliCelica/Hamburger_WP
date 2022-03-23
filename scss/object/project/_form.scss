@@ -1,13 +1,9 @@
 @use '../../foundation/base' as *;
 
 .p-form {
-    // position: relative;
     margin-top: 38px;
-
     @include header {
         margin-top: 86px;
         margin-right: rem(31);
     }; 
-
-
 }

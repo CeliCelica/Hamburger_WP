@@ -1,24 +1,42 @@
 @use '../../foundation/base' as *;
 .u-margin {
     &__takeOut{
-        margin-left: tabSize(40);
+        margin: 0 auto;
+        @include tab {
+            margin-left: tabSize(40);
+        }; 
         @include pc {
             margin-left: pcSize(111);
         }; 
     }
     &__eatIn{
-        margin-left: tabSize(41);
-        margin-right: tabSize(40);
+        margin: 0 auto;
+        margin-top: 20px;
+        @include tab {
+            margin-top: 0px;
+            margin-left: tabSize(41);
+            margin-right: tabSize(40);
+        }; 
         @include pc {
             margin-left: pcSize(80);
             margin-right: pcSize(112);
         }; 
     }
     &__mainTitle {
-        margin-top: rem(24);
-        margin-left: rem(22);
+        margin-top: rem(13);
+        margin-left: rem(12);
+        @include tab {
+            margin-top: rem(24);
+            margin-left: rem(22);
+        }; 
     }
     &__searchBox {
         margin-right: 13px;
+    }
+    &__textBox {
+        margin-bottom: 10px;
+        @include tab {
+            margin-bottom: 20px;
+        }; 
     }
 }

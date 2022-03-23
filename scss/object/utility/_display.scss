@@ -2,10 +2,13 @@
 
 .u-display {
     &__article {
-        width: 100%;
+        margin-top: 20px;
         display: flex;
-        justify-content: center;
-        margin-top: 40px;
+        flex-flow: column;
+        @include tab {
+            margin-top: 40px;
+            flex-flow: nowrap;
+        }; 
         @include pc {
             margin-top: 120px;
         }; 
