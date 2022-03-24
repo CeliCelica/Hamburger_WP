@@ -1,4 +1,6 @@
 @use '../../foundation/base' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variable' as *;
 .u-margin {
     &__takeOut{
         margin: 0 auto;
@@ -29,9 +31,6 @@
             margin-top: rem(24);
             margin-left: rem(22);
         }; 
-    }
-    &__searchBox {
-        margin-right: 13px;
     }
     &__textBox {
         margin-bottom: 10px;

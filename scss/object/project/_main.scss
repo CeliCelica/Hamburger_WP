@@ -1,0 +1,41 @@
+@use '../../foundation/base' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variable' as *;
+
+.p-main {
+    width: 100%;
+    height: 285px;
+    @include pc {
+        height: 530px;
+    };
+    &__topImages {
+        background-image: url(../images/pagetop_sp.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        @include tab {
+            background-image: url(../images/pagetop_tab.jpg);
+            background-position: right;
+        };
+        @include pc {
+            background-image: url(../images/pagetop_pc.jpg);
+        };
+    }
+    &__topTitle {
+        display: block;
+        color: #fff;
+        font-family: $fontM1;
+        font-weight: bold;
+        font-size: rem(36);
+        padding-top: 119px;
+        padding-left: 25px;
+        @include tab {
+            padding-top: 117px;
+            padding-left: 86px;
+        };
+        @include pc {
+            font-size: rem(40);
+            padding-top: 231px;
+        };
+    }
+}

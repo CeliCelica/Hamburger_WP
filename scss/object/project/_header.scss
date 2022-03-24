@@ -1,0 +1,22 @@
+@use '../../foundation/base' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variable' as *;
+
+.p-header {
+    &__logo {
+        text-align: center;
+        padding-top: 40px;
+        font-family: $fontRobo;
+        color: $gray;
+        font-size: rem(40);
+        @include pc {
+            padding-top: 30px;
+            font-size: rem(64);
+        }; 
+        @include header {
+            text-align: initial;
+            padding-top: 67px;
+            margin-left: rem(65);
+        }; 
+    }
+}

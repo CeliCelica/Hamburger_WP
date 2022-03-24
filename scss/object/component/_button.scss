@@ -1,19 +1,16 @@
 @use '../../foundation/base' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variable' as *;
+
 .c-button {
-    &__searchBox, &__submitButton{
-        height: 46px;
+    &__box, &__button{
         border: 1px solid $gray;
         border-radius: 10px;
     }
-    &__searchBox {
-    width: rem(230);
+    &__box {
     background: #fff url(../images/common/search_icon.png) no-repeat top 11px left 12px;
-        @include tab {
-            width: rem(396);
-        }; 
     }
-    &__submitButton {
-        width: rem(78);
+    &__button {
         text-align: center;
         font-family: $fontM1;
         font-size: 16px;
@@ -22,9 +19,6 @@
         background: -moz-linear-gradient(top, #F2EDE9, #DED8D3);
         background: -webkit-linear-gradient(top, #F2EDE9, #DED8D3);
         background: linear-gradient(top, #F2EDE9, #DED8D3);
-        @include tab {
-            width: rem(136);
-        }; 
     }
 }
 

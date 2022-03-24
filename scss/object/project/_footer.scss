@@ -1,0 +1,25 @@
+@use '../../foundation/base' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variable' as *;
+
+.p-footer {
+    color: #fff;
+    text-align: center;
+    font-family: $fontM1;
+    &__list {
+        height: 108px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: rem(20);
+        li {
+            padding: 0 15px;
+            &:first-of-type {
+                border-right: solid 2px #fff;
+            }
+        }
+    }
+    &__copyright {
+        font-size: rem(14);
+    }
+}

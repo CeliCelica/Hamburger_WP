@@ -1,0 +1,19 @@
+// レスポンシブ
+$tab: 600px;
+$pc: 1025px;
+$header: 1400px;
+@mixin tab {
+    @media (min-width: ($tab)) {
+        @content;
+    }
+}
+@mixin pc {
+    @media (min-width: ($pc)) {
+      @content;
+    }
+}
+@mixin header {
+    @media (min-width: ($header)) {
+      @content;
+    }
+}

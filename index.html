@@ -12,18 +12,20 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
-<body class="container">
-    <header class="l-header">
-        <h1 class="l-header__logo">Hamburger</h1>
+<body class="c-grid__container">
+    <header class="l-header c-grid__header u-display__header">
+        <h1 class="p-header__logo">Hamburger</h1>
         <form class="p-form" action="サイトURL" method="get">
-            <input class="c-button__searchBox u-margin__searchBox" type="search" name="search" placeholder=""/>
-            <input class="c-button__submitButton" type="submit" name="submit" value="検索" />
+            <input class="p-form__box c-button__box" type="search" name="search" placeholder=""/>
+            <input class="p-form__button c-button__button" type="submit" name="submit" value="検索" />
         </form>
     </header>    
-    <main class="l-main">
-        <h2><a>ダミーサイト</a></h2>
+    <main class="l-main c-grid__main">
+        <h2 class="p-main p-main__topImages">
+            <a class="p-main__topTitle">ダミーサイト</a>
+        </h2>
         <div class="u-display__article">
-            <article class="p-article__takeOut u-margin__takeOut">
+            <article class="p-article p-article__takeOut u-margin__takeOut">
                 <h3 class="c-media__mainTitle u-margin__mainTitle">Take Out</h3>
                 <div class="u-position__textBox">
                     <section class="c-media__textBox u-margin__textBox">
@@ -36,7 +38,7 @@
                     </section>
                 </div>
             </article>
-            <article class="p-article__eatIn u-margin__eatIn">
+            <article class="p-article p-article__eatIn u-margin__eatIn">
                 <h3 class="c-media__mainTitle u-margin__mainTitle">Eat In</h3>
                 <div class="u-position__textBox">
                     <section class="c-media__textBox u-margin__textBox">
@@ -50,24 +52,26 @@
                 </div>
             </article>
         </div>
-        <div class="l-main__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754723176!2d139.74323885080574!3d35.65858048010233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1647246040063!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            <div><section>
-                <h3>見出しが入ります</h3>
-                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            </div></section>
+        <div class="p-map">
+            <iframe class="p-map_google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754723176!2d139.74323885080574!3d35.65858048010233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1647246040063!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="p-map__background-1">
+                <section class="p-map__background-2">
+                    <h3 class="p-map__title">見出しが入ります</h3>
+                    <p class="p-map__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                </section>
+            </div>
         </div>
     </main>
-    <nav class="l-sidebar">
-        <h2 class="l-sidebar__openbtn" id="js-openbtn">
-            <span class="l-sidebar__Menu">Menu</span>
-            <span class="l-sidebar__line l-sidebar__line--1"></span>
-            <span class="l-sidebar__line l-sidebar__line--2"></span>
+    <nav class="l-sidebar p-sidebar c-grid__sidebar">
+        <h2 class="p-sidebar__button" id="js-sidebar__button">
+            <span class="p-sidebar__Menu">Menu</span>
+            <span class="p-sidebar__line p-sidebar__line--1"></span>
+            <span class="p-sidebar__line p-sidebar__line--2"></span>
         </h2>
-        <div class="l-sidebar__nav">
-            <ul class="l-sidebar___list">
-                <li class="l-sidebar___item"><a href="#">バーガー</a>
-                    <ul class="l-sidebar___subList">
+        <div class="p-sidebar__nav">
+            <ul class="p-sidebar___list">
+                <li class="p-sidebar___item"><a href="#">バーガー</a>
+                    <ul class="p-sidebar___subList">
                         <li><a href="#">ハンバーガー</a></li>
                         <li><a href="#">チーズバーガー</a></li>
                         <li><a href="#">テリヤキバーガー</a></li>
@@ -77,16 +81,16 @@
                         <li><a href="#">チキンバーガー</a></li>
                     </ul>
                 </li>
-                <li class="l-sidebar___item"><a href="#">サイド</a>
-                    <ul class="l-sidebar___subList">
+                <li class="p-sidebar___item"><a href="#">サイド</a>
+                    <ul class="p-sidebar___subList">
                         <li><a href="#">ポテト</a></li>
                         <li><a href="#">サラダ</a></li>
                         <li><a href="#">ナゲット</a></li>
                         <li><a href="#">コーン</a></li>
                     </ul>
                 </li>
-                <li class="l-sidebar___item"><a href="#">ドリンク</a>
-                    <ul class="l-sidebar___subList">
+                <li class="p-sidebar___item"><a href="#">ドリンク</a>
+                    <ul class="p-sidebar___subList">
                         <li><a href="#">コーラ</a></li>
                         <li><a href="#">ファンタ</a></li>
                         <li><a href="#">オレンジ</a></li>
@@ -97,14 +101,14 @@
                 </li>
             </ul>
         </div>
-        <div class="l-sidebar__blackBg" id="js-blackBg"></div>
+        <div class="p-sidebar__blackBack" id="js-blackBack"></div>
     </nav>
-    <footer class="l-footer">
-        <ul>
+    <footer class="l-footer p-footer c-grid__footer">
+        <ul class="p-footer__list">
             <li>ショップ情報</li>
             <li>ヒストリー</li>
         </ul>
-        <p><small>Copyright: RaiseTech</small></p>
+        <p class="p-footer__copyright"><small>Copyright: RaiseTech</small></p>
     </footer>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="css/style.js"></script>

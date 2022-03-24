@@ -1,5 +1,10 @@
 // project/_index.scss
+@forward "header";
+@forward "main";
 @forward "articles";
+@forward "map";
+@forward "sidebar";
+@forward "footer";
 @forward "comments";
 @forward "form";
 @forward "gallery";

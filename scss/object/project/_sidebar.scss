@@ -1,0 +1,108 @@
+@use '../../foundation/base' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variable' as *;
+
+.p-sidebar {
+    background-color: #F2EDE9;
+    color: $gray;
+    &__button {
+        font-family: $fontRobo;
+        font-size: rem(20);
+        @media (max-width: 1024px) {
+            position: absolute;
+            top: 18px;
+            right: 26px;
+            cursor: pointer;
+            z-index: 300;
+        }; 
+        @include tab {
+        font-size: rem(34);
+        }; 
+        @include pc {
+            margin-top: 82px;
+            margin-left: rem(45);
+            pointer-events: none;
+        }; 
+    }
+    &__nav {
+        @media (max-width: 1024px) {
+            position: fixed;
+            right: -387px;
+            top: 0;
+            width: 328px;
+            height: 100vh;
+            padding: 212px 0 527px rem(45);
+            background-color: #F2EDE9;
+            transition: all 0.6s;
+            z-index: 200;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        };
+        @include tab {
+            width: 367px;
+        };
+        @include pc {
+            margin-top: 85px;
+            padding-left: rem(45);
+        }; 
+    }
+    &___item {
+        font-family: $fontM1;
+        font-size: rem(24);
+        line-height: 85px;
+        & > a {
+            font-weight: bold;
+        }
+    }
+    &___subList {
+        display: block;
+        margin-left: rem(20);
+        font-size: rem(20);
+        line-height: 43px;
+    }
+    &__blackBack {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+        background: rgba(3,3,3,.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .6s;
+        cursor: pointer;
+    }
+}
+@media (max-width: 1024px) {
+    .nav-open {
+         .p-sidebar {
+            &__nav {
+                right: 0;
+            }
+            &__blackBack {
+                opacity: 1;
+                visibility: visible;
+            }
+            &__Menu{
+                visibility: hidden;
+            }
+            &__line {
+                position: absolute;
+                left: 25px;
+                width: 32px;
+                height: 6px;
+                background-color: $gray;
+                transition: all .6s;
+                &--1 {
+                    transform: rotate(45deg);
+                    top: 20px;
+                }
+                &--2 {
+                    transform: rotate(-45deg);
+                    top: 20px;
+                }
+            }
+        }    
+    }
+};

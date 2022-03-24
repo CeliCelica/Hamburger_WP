@@ -1,9 +1,17 @@
 @use '../../foundation/base' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variable' as *;
 
 .u-display {
+    &__header {
+        @include header {
+            display: flex;
+            justify-content: space-between;
+        };
+    }
     &__article {
-        margin-top: 20px;
         display: flex;
+        margin-top: 20px;
         flex-flow: column;
         @include tab {
             margin-top: 40px;

@@ -1,9 +1,29 @@
 @use '../../foundation/base' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variable' as *;
 
 .p-form {
+    text-align: center;
     margin-top: 38px;
     @include header {
         margin-top: 86px;
         margin-right: rem(31);
-    }; 
+        text-align: initial;
+    };
+    &__box, &__button {
+        height: 46px;
+    }
+    &__box {
+        width: rem(230);
+        margin-right: 13px;
+        @include tab {
+            width: rem(396);
+        }; 
+    } 
+    &__button {
+        width: rem(78);
+        @include tab {
+            width: rem(136);
+        }; 
+    }
 }
