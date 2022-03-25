@@ -1,5 +1,4 @@
 $(function() {
-  
   function toggleNav() {
       var body = document.body;
       var hamburger = document.getElementById('js-sidebar__button');
@@ -14,7 +13,7 @@ $(function() {
   toggleNav();
 
   $(window).on('load resize click', function() {
-    var heightSize = $('.abc').outerHeight();
+    var heightSize = $('.js-map__height').outerHeight();
     $('.p-map').css('height', heightSize)
   });
 });

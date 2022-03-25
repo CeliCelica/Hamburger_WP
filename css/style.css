@@ -34,12 +34,6 @@ body {
   background: linear-gradient(top, #F2EDE9, #DED8D3);
 }
 
-@media (max-width: 1024px) {
-  .c-grid__container.nav-open {
-    position: fixed;
-    width: 100vw;
-  }
-}
 @media (min-width: 1025px) {
   .c-grid__header {
     grid-row: 1/2;
@@ -61,6 +55,12 @@ body {
   .c-grid__footer {
     grid-row: 3/4;
     grid-column: 1/3;
+  }
+}
+@media (max-width: 1024px) {
+  .c-grid__container.nav-open {
+    position: fixed;
+    width: 100vw;
   }
 }
 .c-media__mainTitle {
