@@ -1,6 +1,15 @@
 @use '../../foundation/base' as *;
 @use '../../foundation/mixin' as *;
 @use '../../foundation/variable' as *;
+
+@media (max-width: 1024px) {
+.c-grid__container {
+    &.nav-open {
+        position: fixed;
+        width: 100vw;
+        }; 
+    }
+}
 @include pc {
     .c-grid {
         &__header {

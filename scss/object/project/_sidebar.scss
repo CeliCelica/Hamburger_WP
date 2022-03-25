@@ -35,15 +35,13 @@
             background-color: #F2EDE9;
             transition: all 0.6s;
             z-index: 200;
-            overflow-y: auto;
+            overflow-y: scroll;
             -webkit-overflow-scrolling: touch;
-        };
-        @include tab {
-            width: 367px;
         };
         @include pc {
             margin-top: 85px;
             padding-left: rem(45);
+
         }; 
     }
     &___item {
