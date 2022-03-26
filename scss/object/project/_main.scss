@@ -39,3 +39,32 @@
         };
     }
 }
+.archive {
+    .p-main {
+        height: 217px;
+        position: relative;
+
+        &__topImages {
+            background-image: url(../archive/images/common/pagetop_arcive_pc.jpg);
+        }
+        &__background {
+            top: 0;
+            @include background-rgba(0.35);
+        }
+        &__topTitle {
+            font-family: $fontRobo;
+            @include tab {
+            };
+            @include pc {
+                font-size: rem(60);
+                padding-top: 80px;
+            };
+            span {
+                font-family: $fontM1;
+                font-weight: bold;
+                font-size: rem(16);
+                padding-left: 20px;
+            }          
+        }    
+    }
+}

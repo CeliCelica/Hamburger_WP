@@ -39,8 +39,7 @@
             -webkit-overflow-scrolling: touch;
         };
         @include pc {
-            margin-top: 85px;
-            padding-left: rem(45);
+            padding: 85px 0 110px rem(45);
 
         }; 
     }
