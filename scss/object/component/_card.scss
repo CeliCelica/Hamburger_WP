@@ -1,0 +1,31 @@
+@use '../../foundation/base' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variable' as *;
+
+.c-card {
+    &__img {
+        width: 50%;
+    }
+    &__textBox {
+        width: 100%;
+        font-family: $fontM1;
+        font-weight: bold;
+        color: #fff;
+        h3 {
+            font-size: cardSize(36);
+            padding: cardSize(53) 0 0 cardSize(63);
+
+        }
+        h4 {
+            font-size: cardSize(24);
+            padding: cardSize(47) 0 0 cardSize(63);
+        }
+        p {
+            font-weight: normal;
+            font-size: cardSize(16);
+            text-align: justify;
+            padding: cardSize(17) cardSize(63) 0 cardSize(63);
+
+        }
+    }
+}

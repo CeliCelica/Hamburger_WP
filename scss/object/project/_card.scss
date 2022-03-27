@@ -1,0 +1,16 @@
+@use '../../foundation/base' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variable' as *;
+
+.p-card {
+    display: flex;
+    margin: 0 cardSize(100) 30px cardSize(100);
+    background-color: #3C2B1C;
+    &__link {
+        padding: cardSize(27) cardSize(100);
+        background: #fff;
+        border-radius: 30px;
+        border: none;
+    }
+}
+

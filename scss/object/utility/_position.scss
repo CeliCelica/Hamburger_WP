@@ -5,9 +5,18 @@
 .u-position {
     &__textBox {
         position: absolute;
-        // height: 1020px;
         width: 100%;
         bottom: 0;
-        // overflow: auto;
+    }
+    &__card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include pc {
+            margin-top: pcSize(25);
+        };
+        @include header {
+            margin-top: cardSize(60);
+        }; 
     }
 }
