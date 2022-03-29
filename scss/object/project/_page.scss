@@ -1,0 +1,36 @@
+@use '../../foundation/base' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variable' as *;
+
+.p-page {
+    width: auto;
+    margin: 0 auto;
+    font-family: $fontRobo;
+    font-size: 16px;
+    color: $gray;
+    margin-top: 86px;
+    border-collapse: separate;
+    border-spacing: 15px 64px;
+    td {
+        vertical-align: middle;
+        &:nth-of-type(3) {
+            background-color: #3C2B1C;
+            color: #fff;
+            }
+        a {
+            display: block;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+        }
+    }
+    &__number {
+        border: 1px solid;
+        background-color: #fff;
+        
+    }
+    &__prev, &__next {
+        font-size: 30px;
+    }
+}
