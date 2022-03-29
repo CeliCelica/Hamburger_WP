@@ -10,13 +10,14 @@
     }
     &__card {
         display: flex;
-        justify-content: center;
         align-items: center;
-        @include pc {
-            margin-top: pcSize(25);
+        justify-content: center;
+        height: 120px;
+        @include tab {
+            height: tabSize(150);
         };
-        @include header {
-            margin-top: cardSize(60);
-        }; 
+        @include pc {
+            height: cardSize(200);
+        };
     }
 }

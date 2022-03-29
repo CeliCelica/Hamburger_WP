@@ -48,7 +48,7 @@
         }
     }
     &__pageNumber {
-        @media (max-width: 600px) {
+        @media (max-width: 599px) {
             display: none;
         }
         @media (max-width: 610px) {
@@ -56,7 +56,7 @@
         }
     }
     &__number {
-        @media (max-width: 600px) {
+        @media (max-width: 599px) {
             display: none;
         }
         @include tab {

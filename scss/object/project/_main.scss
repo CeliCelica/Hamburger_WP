@@ -11,7 +11,7 @@
     &__topImages {
         background-image: url(../images/pagetop_sp.jpg);
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: left;
         background-size: cover;
         @include tab {
             background-image: url(../images/pagetop_tab.jpg);
@@ -41,9 +41,11 @@
 }
 .archive {
     .p-main {
-        height: 217px;
+        height: 283px;
         position: relative;
-
+        @include pc {
+            height: 217px;
+        };
         &__topImages {
             background-image: url(../archive/images/common/pagetop_arcive_pc.jpg);
         }
@@ -53,35 +55,53 @@
         }
         &__topTitle {
             font-family: $fontRobo;
-            line-height: 69px;
+            padding-top: 102px;
+            padding-left: 37px;
             @include tab {
+            line-height: 69px;
+            font-size: rem(60);
+                padding-left: 86px;
             };
             @include pc {
-                font-size: rem(60);
                 padding-top: 80px;
             };
             span {
+                display: block;
                 font-family: $fontM1;
                 font-weight: bold;
                 font-size: rem(16);
-                padding-left: 20px;
-                vertical-align: middle;
+                padding-top: 7px;
+                @include tab {
+                    display: initial;
+                    padding-left: 20px;
+                    vertical-align: middle;
+                };
             }          
         }
         &__description {
             font-family: $fontM1;
             color: $brown;
-            margin: 60px pcSize(100) 70px pcSize(100);
+            margin: 33px 22px 19px 30px;
+            @include tab {
+                margin: 36px tabSize(42) 37px tabSize(42);
+            };
+            @include pc {
+                margin: 60px pcSize(100) 70px pcSize(100);
+            };
             h2 {
                 font-weight: bold;
-                font-size: rem(36);
-
+                font-size: rem(28);
+                @include tab {
+                    font-size: rem(36);
+                };
             }
             p {
                 font-size: rem(16);
                 text-align: justify;
-                padding-top: 25px;
-
+                padding-top: 30px;
+                @include tab {
+                    padding-top: 25px;
+                };
             }
         }    
     }

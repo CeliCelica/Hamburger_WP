@@ -3,14 +3,27 @@
 @use '../../foundation/variable' as *;
 
 .p-card {
-    display: flex;
-    margin: 0 cardSize(100) 30px cardSize(100);
     background-color: #3C2B1C;
+    margin: 0 22px 20.9px 22px;
+    @include tab {
+        display: flex;
+        margin: 0 tabSize(43) 20.5px tabSize(43);
+    };
+    @include pc {
+        margin: 0 cardSize(100) 30px cardSize(100);
+    };
     &__link {
-        padding: cardSize(27) cardSize(100);
         background: #fff;
         border-radius: 30px;
         border: none;
+        padding: 10px 42px;
+
+        @include tab {
+            padding: tabSize(10) tabSize(42);
+        };
+        @include pc {
+            padding: cardSize(27) cardSize(100);
+        };
     }
 }
 
