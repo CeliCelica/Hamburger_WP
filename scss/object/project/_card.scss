@@ -12,12 +12,41 @@
     @include pc {
         margin: 0 cardSize(100) 30px cardSize(100);
     };
+    &__textBox {
+        h3 {
+            padding: 31.5px 0 0 17px;
+            @include tab {
+                padding: tabSize(30) 0 0 tabSize(34.7);
+            };
+            @include pc {
+                padding: cardSize(53) 0 0 cardSize(63);
+            };
+        }
+        h4 {
+            padding: 24px 0 0 17px;
+            @include tab {
+                padding: tabSize(24) 0 0 tabSize(34.7);
+            };
+            @include pc {
+                padding: cardSize(47) 0 0 cardSize(63);
+            };
+        }
+        p {
+            padding: 10px 17px 0 17px;
+            @include tab {
+                padding: rem(10) tabSize(34.7) 0 tabSize(34.7);
+                };
+            @include pc {
+                padding: cardSize(17) cardSize(63) 0 cardSize(63);
+            };
+        }
+    }
+
     &__link {
         background: #fff;
         border-radius: 30px;
         border: none;
         padding: 10px 42px;
-
         @include tab {
             padding: tabSize(10) tabSize(42);
         };

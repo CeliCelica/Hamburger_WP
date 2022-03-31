@@ -16,6 +16,8 @@
     &__box {
         width: rem(230);
         margin-right: 13px;
+        padding-left: 48px;
+        text-align: initial;
         @include tab {
             width: rem(396);
         }; 

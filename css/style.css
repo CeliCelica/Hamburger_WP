@@ -43,62 +43,53 @@ body {
     width: 50%;
   }
 }
-.c-card__textBox {
+.c-card__text {
   width: 100%;
   font-family: "M+ 1m";
   font-weight: bold;
   color: #fff;
 }
-.c-card__textBox h3 {
+.c-card__text h3 {
   font-size: 20px;
-  padding: 31.5px 0 0 17px;
 }
 @media (min-width: 600px) {
-  .c-card__textBox h3 {
+  .c-card__text h3 {
     font-size: 1.25rem;
-    padding: clamp(18px,2.927vw,30px) 0 0 clamp(20px,3.385vw,34.7px);
   }
 }
 @media (min-width: 1025px) {
-  .c-card__textBox h3 {
+  .c-card__text h3 {
     font-size: clamp(19px,1.865vw,36px);
-    padding: clamp(28px,2.746vw,53px) 0 0 clamp(33px,3.264vw,63px);
   }
 }
-.c-card__textBox h4 {
+.c-card__text h4 {
   font-size: 16px;
-  padding: 24px 0 0 17px;
 }
 @media (min-width: 600px) {
-  .c-card__textBox h4 {
+  .c-card__text h4 {
     font-size: 1rem;
-    padding: clamp(14px,2.341vw,24px) 0 0 clamp(20px,3.385vw,34.7px);
   }
 }
 @media (min-width: 1025px) {
-  .c-card__textBox h4 {
+  .c-card__text h4 {
     font-size: clamp(13px,1.244vw,24px);
-    padding: clamp(25px,2.435vw,47px) 0 0 clamp(33px,3.264vw,63px);
   }
 }
-.c-card__textBox p {
+.c-card__text p {
   font-weight: normal;
   font-size: 16px;
   line-height: 25px;
   text-align: justify;
-  padding: 10px 17px 0 17px;
 }
 @media (min-width: 600px) {
-  .c-card__textBox p {
+  .c-card__text p {
     font-size: clamp(9px,1.561vw,16px);
-    padding: 0.625rem clamp(20px,3.385vw,34.7px) 0 clamp(20px,3.385vw,34.7px);
     line-height: 16px;
   }
 }
 @media (min-width: 1025px) {
-  .c-card__textBox p {
+  .c-card__text p {
     font-size: clamp(8px,0.829vw,16px);
-    padding: clamp(9px,0.881vw,17px) clamp(33px,3.264vw,63px) 0 clamp(33px,3.264vw,63px);
   }
 }
 
@@ -402,6 +393,45 @@ body {
     margin: 0 clamp(53px,5.181vw,100px) 30px clamp(53px,5.181vw,100px);
   }
 }
+.p-card__textBox h3 {
+  padding: 31.5px 0 0 17px;
+}
+@media (min-width: 600px) {
+  .p-card__textBox h3 {
+    padding: clamp(18px,2.927vw,30px) 0 0 clamp(20px,3.385vw,34.7px);
+  }
+}
+@media (min-width: 1025px) {
+  .p-card__textBox h3 {
+    padding: clamp(28px,2.746vw,53px) 0 0 clamp(33px,3.264vw,63px);
+  }
+}
+.p-card__textBox h4 {
+  padding: 24px 0 0 17px;
+}
+@media (min-width: 600px) {
+  .p-card__textBox h4 {
+    padding: clamp(14px,2.341vw,24px) 0 0 clamp(20px,3.385vw,34.7px);
+  }
+}
+@media (min-width: 1025px) {
+  .p-card__textBox h4 {
+    padding: clamp(25px,2.435vw,47px) 0 0 clamp(33px,3.264vw,63px);
+  }
+}
+.p-card__textBox p {
+  padding: 10px 17px 0 17px;
+}
+@media (min-width: 600px) {
+  .p-card__textBox p {
+    padding: 0.625rem clamp(20px,3.385vw,34.7px) 0 clamp(20px,3.385vw,34.7px);
+  }
+}
+@media (min-width: 1025px) {
+  .p-card__textBox p {
+    padding: clamp(9px,0.881vw,17px) clamp(33px,3.264vw,63px) 0 clamp(33px,3.264vw,63px);
+  }
+}
 .p-card__link {
   background: #fff;
   border-radius: 30px;
@@ -665,6 +695,8 @@ body {
 .p-form__box {
   width: 14.375rem;
   margin-right: 13px;
+  padding-left: 48px;
+  text-align: initial;
 }
 @media (min-width: 600px) {
   .p-form__box {

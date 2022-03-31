@@ -14,6 +14,6 @@ $(function() {
 
   $(window).on('load resize', function() {
     var heightSize = $('.js-map__height').outerHeight();
-    $('.p-map').css('height', heightSize)
+    $('.p-map').css('height', heightSize);
   });
 });

@@ -10,33 +10,27 @@
             width: 50%;
         };
     }
-    &__textBox {
+    &__text {
         width: 100%;
         font-family: $fontM1;
         font-weight: bold;
         color: #fff;
         h3 {
             font-size: 20px;
-            padding: 31.5px 0 0 17px;
             @include tab {
                 font-size: rem(20);
-                padding: tabSize(30) 0 0 tabSize(34.7);
             };
             @include pc {
                 font-size: cardSize(36);
-                padding: cardSize(53) 0 0 cardSize(63);
             };
         }
         h4 {
             font-size: 16px;
-            padding: 24px 0 0 17px;
             @include tab {
                 font-size: rem(16);
-                padding: tabSize(24) 0 0 tabSize(34.7);
             };
             @include pc {
                 font-size: cardSize(24);
-                padding: cardSize(47) 0 0 cardSize(63);
             };
         }
         p {
@@ -44,15 +38,12 @@
             font-size: 16px;
             line-height: 25px;
             text-align: justify;
-            padding: 10px 17px 0 17px;
             @include tab {
                 font-size: tabSize(16);
-                padding: rem(10) tabSize(34.7) 0 tabSize(34.7);
                 line-height: 16px;
                 };
             @include pc {
                 font-size: cardSize(16);
-                padding: cardSize(17) cardSize(63) 0 cardSize(63);
             };
         }
     }
