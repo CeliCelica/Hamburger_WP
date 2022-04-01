@@ -69,7 +69,13 @@
         font-weight: bold;
         color: $brown;
         font-size: 20px;
-        margin: 60px pcSize(100) 0px pcSize(100);
+        margin: 60px tabSize(60) 0px tabSize(60);
+        @include tab {
+            margin: 60px tabSize(60) 0px tabSize(60);
+        }
+        @include pc {
+            margin: 60px pcSize(100) 0px pcSize(100);
+        }
         &--1 {
             font-size: 28px;
         }
@@ -80,9 +86,13 @@
         font-size: 16px;
         text-align: justify;
         background-color: #F5F5F5;
-        margin: 60px pcSize(100) 0px pcSize(100);
+        margin: 60px tabSize(60) 0px tabSize(60);
         padding: 50px 50px;
+        @include tab {
+            margin: 60px tabSize(60) 0px tabSize(60);
+        }
         @include pc {
+            margin: 60px pcSize(100) 0px pcSize(100);
         }
         cite {
             display: block;
@@ -98,17 +108,32 @@
     &__imgLarge {
         width: 100%;
         height: auto;
-        padding: 60px pcSize(100) 0 pcSize(100);
+        padding: 60px tabSize(60) 0px tabSize(60);
+        @include tab {
+            padding: 60px tabSize(60) 0px tabSize(60);
+        }
+        @include pc {
+            padding: 60px pcSize(100) 0px pcSize(100);
+        }
     }
     &__code {
         height: 237px;
-        margin: 60px pcSize(100) 0 pcSize(100);
+        margin: 60px tabSize(60) 0 pcSize(60);
         padding: 20px 0 0 50px;
         background-color: #F5F5F5;
         line-height: 1.5rem;
+        @include tab {
+            margin: 60px tabSize(60) 0 pcSize(60);
+        };
+        @include pc {
+            margin: 60px pcSize(100) 0 pcSize(100);
+        };
     }
     &__table {
-        padding: 50px pcSize(100) 0 pcSize(100);
+        padding: 60px tabSize(60) 0 tabSize(60);
+        @include pc {
+            padding: 50px pcSize(100) 0 pcSize(100);
+        };
         table {
         width: 100%;
         }
@@ -128,13 +153,25 @@
         }
     }
     &__button {
-        margin: 60px 0 0 100px;
+        margin: 60px 0 0 tabSize(60);
         color: $brown;
         border-radius: 20px;
         padding: 41px 190px;
+        @include tab {
+            margin: 60px 0 0 tabSize(60);
+        };
+        @include pc {
+            margin: 60px 0 0 pcSize(100);
+        };
     }
     &__bold {
-        margin: 60px 0 353px 100px;
+        margin: 60px 0 228px  tabSize(60);
+        @include tab {
+            margin: 60px 0 228px  tabSize(60);
+        };
+        @include pc {
+            margin: 60px 0 353px  pcSize(100);
+        };
     }
 }
 .archive {
@@ -198,10 +235,17 @@
             };
         }
         &__description {
-            @include pc {
-                margin-bottom: 0;
+            @include tab {
+                margin: 60px tabSize(60) 0 tabSize(60);
             };
-
+            @include pc {
+                margin: 60px pcSize(100) 0 pcSize(100);
+            };
+            p {
+                @include tab {
+                    padding-top: 60px;
+                };
+            }
         }
     }
 }
