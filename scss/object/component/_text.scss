@@ -2,3 +2,9 @@
 @use '../../foundation/mixin' as *;
 @use '../../foundation/variable' as *;
 
+.c-text {
+    font-family: $fontM1;
+    font-size: 16px;
+    color: $brown;
+    text-align: justify;
+}

@@ -1,0 +1,20 @@
+@use '../../foundation/base' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variable' as *;
+
+.p-list {
+    margin: 60px 0 0 150px;
+    ol li {
+        list-style-type: decimal;
+        list-style-position: inside;
+    }
+    &__ol--2, &__ul--2 {
+        margin: 20px 0 0 18px;
+    }
+    &__ol--3, &__ul--3 {
+        margin-top: 20px;
+    }
+    &__ul--1 {
+        margin-top: 60px;
+    }
+}

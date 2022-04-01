@@ -83,7 +83,6 @@
         margin: 60px pcSize(100) 0px pcSize(100);
         padding: 50px 50px;
         @include pc {
-
         }
         cite {
             display: block;
@@ -100,6 +99,42 @@
         width: 100%;
         height: auto;
         padding: 60px pcSize(100) 0 pcSize(100);
+    }
+    &__code {
+        height: 237px;
+        margin: 60px pcSize(100) 0 pcSize(100);
+        padding: 20px 0 0 50px;
+        background-color: #F5F5F5;
+        line-height: 1.5rem;
+    }
+    &__table {
+        padding: 50px pcSize(100) 0 pcSize(100);
+        table {
+        width: 100%;
+        }
+        th, td {
+            border: solid 1px $gray;
+            height: 77px;
+            padding: 28px 0 28px 30px;
+        }
+        th {
+            font-weight: normal;
+            &:nth-of-type(1) {
+                width: 30%;
+            }
+            &:nth-of-type(2) {
+                width: 70%;
+            }
+        }
+    }
+    &__button {
+        margin: 60px 0 0 100px;
+        color: $brown;
+        border-radius: 20px;
+        padding: 41px 190px;
+    }
+    &__bold {
+        margin: 60px 0 353px 100px;
     }
 }
 .archive {

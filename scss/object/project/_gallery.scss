@@ -1,0 +1,19 @@
+@use '../../foundation/base' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variable' as *;
+
+.p-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 100px;
+    margin-top: 60px;
+    img {
+        width: calc((100% - 20px * 2) / 3);
+    }
+    &__only {
+        display: block;
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+}

@@ -193,6 +193,13 @@ body {
   }
 }
 
+.c-text {
+  font-family: "M+ 1m";
+  font-size: 16px;
+  color: #3C2A10;
+  text-align: justify;
+}
+
 .p-header__logo {
   text-align: center;
   padding-top: 40px;
@@ -212,6 +219,23 @@ body {
     padding-top: 67px;
     margin-left: 4.0625rem;
   }
+}
+
+.p-list {
+  margin: 60px 0 0 150px;
+}
+.p-list ol li {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+.p-list__ol--2, .p-list__ul--2 {
+  margin: 20px 0 0 18px;
+}
+.p-list__ol--3, .p-list__ul--3 {
+  margin-top: 20px;
+}
+.p-list__ul--1 {
+  margin-top: 60px;
 }
 
 .p-main {
@@ -328,6 +352,42 @@ body {
   width: 100%;
   height: auto;
   padding: 60px clamp(73px,7.143vw,100px) 0 clamp(73px,7.143vw,100px);
+}
+.p-main__code {
+  height: 237px;
+  margin: 60px clamp(73px,7.143vw,100px) 0 clamp(73px,7.143vw,100px);
+  padding: 20px 0 0 50px;
+  background-color: #F5F5F5;
+  line-height: 1.5rem;
+}
+.p-main__table {
+  padding: 50px clamp(73px,7.143vw,100px) 0 clamp(73px,7.143vw,100px);
+}
+.p-main__table table {
+  width: 100%;
+}
+.p-main__table th, .p-main__table td {
+  border: solid 1px #707070;
+  height: 77px;
+  padding: 28px 0 28px 30px;
+}
+.p-main__table th {
+  font-weight: normal;
+}
+.p-main__table th:nth-of-type(1) {
+  width: 30%;
+}
+.p-main__table th:nth-of-type(2) {
+  width: 70%;
+}
+.p-main__button {
+  margin: 60px 0 0 100px;
+  color: #3C2A10;
+  border-radius: 20px;
+  padding: 41px 190px;
+}
+.p-main__bold {
+  margin: 60px 0 353px 100px;
 }
 
 .archive .p-main {
@@ -450,18 +510,20 @@ body {
 @media (min-width: 600px) {
   .single .p-article__img {
     width: 50%;
+    height: 50%;
   }
 }
-.single .p-article__text {
+.single .p-article__text--1, .single .p-article__text--2 {
   line-height: 1.3rem;
   padding-left: clamp(29px,2.857vw,40px);
   font-size: clamp(12px,1.143vw,16px);
 }
+.single .p-article__text--2 {
+  padding-left: 0;
+  padding-right: clamp(29px,2.857vw,40px);
+}
 .single article:nth-of-type(2) .p-article:nth-of-type(1) {
   flex-direction: row-reverse;
-}
-.single .p-article:nth-of-type(2) .p-article__text:nth-of-type(2) {
-  background-color: pink;
 }
 
 .p-card {
@@ -798,6 +860,22 @@ body {
   }
 }
 
+.p-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 100px;
+  margin-top: 60px;
+}
+.p-gallery img {
+  width: calc((100% - 40px) / 3);
+}
+.p-gallery__only {
+  display: block;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
 .p-page {
   width: 100%;
   border-collapse: separate;
@@ -970,13 +1048,6 @@ body {
   .u-position__card {
     height: clamp(106px,10.363vw,200px);
   }
-}
-
-.c-text {
-  font-family: "M+ 1m";
-  font-size: 16px;
-  color: #3C2A10;
-  text-align: justify;
 }
 
 /*# sourceMappingURL=style.css.map */

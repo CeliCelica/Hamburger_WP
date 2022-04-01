@@ -36,19 +36,23 @@
         &__img {
             @include tab {
                 width: 50%;
+                height: 50%;
             };
         }
         &__text {
-            line-height: 1.3rem;
-            padding-left: pcSize(40);
-            font-size: pcSize(16);
+            &--1, &--2 {
+                line-height: 1.3rem;
+                padding-left: pcSize(40);
+                font-size: pcSize(16);
+            }
+            &--2 {
+                padding-left: 0;
+                padding-right: pcSize(40);
+            }
         }
     }
     article:nth-of-type(2) .p-article:nth-of-type(1) {
         flex-direction: row-reverse;
-    }
-    .p-article:nth-of-type(2) .p-article__text:nth-of-type(2) {
-        background-color: pink;
     }
 }
 
