@@ -5,20 +5,20 @@
 .p-article {
     position: relative;
     &__takeOut {
-        background-image: url('../images/TakeOut_bg_sp.jpg');
+        background-image: url('../images/index/TakeOut_bg_sp.jpg');
         width: 335px;
         height: 642px;
         @include tab {
-            background-image: url('../images/TakeOut_bg.jpg');
+            background-image: url('../images/index/TakeOut_bg.jpg');
         }; 
     }
     &__eatIn {
-        background-image: url('../images/EatIn_bg_sp.jpg');
+        background-image: url('../images/index/EatIn_bg_sp.jpg');
         background-repeat: no-repeat;
         width: 336px;
         height: 643px;
         @include tab {
-            background-image: url('../images/EatIn_bg.jpg');
+            background-image: url('../images/index/EatIn_bg.jpg');
         }; 
     }
     @include tab {
@@ -26,3 +26,30 @@
         height: 1195px;
     }; 
 }
+.single {
+    .p-article {
+        display: flex;
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 60px pcSize(100) 0px pcSize(100);
+        &__img {
+            @include tab {
+                width: 50%;
+            };
+        }
+        &__text {
+            line-height: 1.3rem;
+            padding-left: pcSize(40);
+            font-size: pcSize(16);
+        }
+    }
+    article:nth-of-type(2) .p-article:nth-of-type(1) {
+        flex-direction: row-reverse;
+    }
+    .p-article:nth-of-type(2) .p-article__text:nth-of-type(2) {
+        background-color: pink;
+    }
+}
+
+

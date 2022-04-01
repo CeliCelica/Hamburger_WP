@@ -9,16 +9,16 @@
         height: 530px;
     };
     &__topImages {
-        background-image: url(../images/pagetop_sp.jpg);
+        background-image: url(../images/index/pagetop_sp.jpg);
         background-repeat: no-repeat;
         background-position: left;
         background-size: cover;
         @include tab {
-            background-image: url(../images/pagetop_tab.jpg);
+            background-image: url(../images/index/pagetop_tab.jpg);
             background-position: right;
         };
         @include pc {
-            background-image: url(../images/pagetop_pc.jpg);
+            background-image: url(../images/index/pagetop_pc.jpg);
         };
     }
     &__topTitle {
@@ -38,6 +38,69 @@
             padding-top: 231px;
         };
     }
+    &__description {
+        font-family: $fontM1;
+        color: $brown;
+        margin: 33px 22px 19px 30px;
+        @include tab {
+            margin: 36px tabSize(42) 37px tabSize(42);
+        };
+        @include pc {
+            margin: 60px pcSize(100) 70px pcSize(100);
+        };
+        h2 {
+            font-weight: bold;
+            font-size: rem(28);
+            @include tab {
+                font-size: rem(36);
+            };
+        }
+        p {
+            font-size: rem(16);
+            text-align: justify;
+            padding-top: 30px;
+            @include tab {
+                padding-top: 25px;
+            };
+        }
+    }
+    &__title {
+        font-family: $fontM1;
+        font-weight: bold;
+        color: $brown;
+        font-size: 20px;
+        margin: 60px pcSize(100) 0px pcSize(100);
+        &--1 {
+            font-size: 28px;
+        }
+    }
+    &__quote {
+        font-family: $fontM1;
+        color: $brown;
+        font-size: 16px;
+        text-align: justify;
+        background-color: #F5F5F5;
+        margin: 60px pcSize(100) 0px pcSize(100);
+        padding: 50px 50px;
+        @include pc {
+
+        }
+        cite {
+            display: block;
+            font-style: normal;
+            padding-top: 60px;
+            a {
+                color: #4A6C9B;
+                text-decoration: underline;
+                padding-left: 13px;
+            }
+        }
+    }
+    &__imgLarge {
+        width: 100%;
+        height: auto;
+        padding: 60px pcSize(100) 0 pcSize(100);
+    }
 }
 .archive {
     .p-main {
@@ -47,7 +110,7 @@
             height: 217px;
         };
         &__topImages {
-            background-image: url(../archive/images/common/pagetop_arcive_pc.jpg);
+            background-image: url(../images/archive/pagetop_arcive_pc.jpg);
         }
         &__background {
             top: 0;
@@ -60,7 +123,7 @@
             @include tab {
             line-height: 69px;
             font-size: rem(60);
-                padding-left: 86px;
+            padding-left: 86px;
             };
             @include pc {
                 padding-top: 80px;
@@ -78,31 +141,32 @@
                 };
             }          
         }
-        &__description {
-            font-family: $fontM1;
-            color: $brown;
-            margin: 33px 22px 19px 30px;
+         
+    }
+}
+.single {
+    .p-main {
+        height: 225px;
+        @include tab {
+            height: 500px;
+        };
+        &__topImages {
+            background-image: url(../images/single/pagetop_page.jpg);
+            background-position: center;
+        }
+        &__topTitle {
+            font-size: rem(36);
+            padding-top: 91px;
             @include tab {
-                margin: 36px tabSize(42) 37px tabSize(42);
+                font-size: rem(60);
+                padding-top: 209px;
             };
+        }
+        &__description {
             @include pc {
-                margin: 60px pcSize(100) 70px pcSize(100);
+                margin-bottom: 0;
             };
-            h2 {
-                font-weight: bold;
-                font-size: rem(28);
-                @include tab {
-                    font-size: rem(36);
-                };
-            }
-            p {
-                font-size: rem(16);
-                text-align: justify;
-                padding-top: 30px;
-                @include tab {
-                    padding-top: 25px;
-                };
-            }
-        }    
+
+        }
     }
 }
