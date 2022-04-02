@@ -556,6 +556,12 @@ body {
 }
 @media (min-width: 600px) {
   .single .p-main__topTitle {
+    font-size: clamp(55px, 5.854vw, 60px);
+    padding-top: 209px;
+  }
+}
+@media (min-width: 1025px) {
+  .single .p-main__topTitle {
     font-size: 3.75rem;
     padding-top: 209px;
   }
@@ -581,6 +587,10 @@ body {
   .single .p-main__description p {
     padding-top: 60px;
   }
+}
+
+.single.page .p-main__topImages {
+  background-image: url(../images/page/pagetop_page.jpg);
 }
 
 .p-article {

@@ -246,6 +246,10 @@
             font-size: rem(36);
             padding-top: 91px;
             @include tab {
+                font-size: clamp(55px,5.854vw,60px);
+                padding-top: 209px;
+            };
+            @include pc {
                 font-size: rem(60);
                 padding-top: 209px;
             };
@@ -265,6 +269,13 @@
                     padding-top: 60px;
                 };
             }
+        }
+    }
+}
+.single.page {
+    .p-main {
+        &__topImages {
+            background-image: url(../images/page/pagetop_page.jpg);
         }
     }
 }
