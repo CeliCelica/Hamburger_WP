@@ -3,8 +3,11 @@
 @use '../../foundation/variable' as *;
 
 .p-gallery {
+    display: flex;
+    flex-flow: column;
+    margin-top: 10px;
     @include tab {
-        display: flex;
+        flex-flow: initial;
         flex-wrap: wrap;
         gap: 16px;
         margin: 0 tabSize(60);
@@ -16,8 +19,10 @@
         margin-top: 60px;
     }
     img {
+        padding: 20px 20px 0 20px;
         @include tab {
             width: calc((100% - 16px * 1) / 2);
+            padding: 0;
         }
         @include pc {
             width: calc((100% - 20px * 2) / 3);
@@ -26,9 +31,13 @@
     &__only {
         display: block;
         margin: 0 auto;
-        margin-top: 60px;
+        margin-top: 30px;
         width: 100%;
-        padding: 0 tabSize(60);
+        padding: 0 54px;
+        @include tab {
+            margin-top: 60px;
+            padding: 0 tabSize(60);
+            }
         @include pc {
         width: initial;
         }

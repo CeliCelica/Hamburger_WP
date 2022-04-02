@@ -69,7 +69,7 @@
         font-weight: bold;
         color: $brown;
         font-size: 20px;
-        margin: 60px tabSize(60) 0px tabSize(60);
+        margin: 30px 20px 0px 20px;
         @include tab {
             margin: 60px tabSize(60) 0px tabSize(60);
         }
@@ -77,19 +77,24 @@
             margin: 60px pcSize(100) 0px pcSize(100);
         }
         &--1 {
-            font-size: 28px;
+            font-size: 24px;
+            @include tab {
+                font-size: 28px;
+            }
         }
     }
     &__quote {
         font-family: $fontM1;
         color: $brown;
         font-size: 16px;
+        line-height: 1.5rem;
         text-align: justify;
         background-color: #F5F5F5;
-        margin: 60px tabSize(60) 0px tabSize(60);
-        padding: 50px 50px;
+        margin: 30px 20px 0px 20px;
+        padding: 30px 20px;
         @include tab {
             margin: 60px tabSize(60) 0px tabSize(60);
+            padding: 50px 50px;
         }
         @include pc {
             margin: 60px pcSize(100) 0px pcSize(100);
@@ -97,7 +102,10 @@
         cite {
             display: block;
             font-style: normal;
-            padding-top: 60px;
+            padding-top: 30px;
+            @include tab {
+                padding-top: 60px;
+            }
             a {
                 color: #4A6C9B;
                 text-decoration: underline;
@@ -108,7 +116,7 @@
     &__imgLarge {
         width: 100%;
         height: auto;
-        padding: 60px tabSize(60) 0px tabSize(60);
+        padding: 30px 20px 0px 20px;
         @include tab {
             padding: 60px tabSize(60) 0px tabSize(60);
         }
@@ -118,19 +126,22 @@
     }
     &__code {
         height: 237px;
-        margin: 60px tabSize(60) 0 pcSize(60);
+        margin: 30px 20px 0 20px;
         padding: 20px 0 0 50px;
         background-color: #F5F5F5;
         line-height: 1.5rem;
         @include tab {
-            margin: 60px tabSize(60) 0 pcSize(60);
+            margin: 60px tabSize(60) 0 tabSize(60);
         };
         @include pc {
             margin: 60px pcSize(100) 0 pcSize(100);
         };
     }
     &__table {
-        padding: 60px tabSize(60) 0 tabSize(60);
+        padding: 30px 20px 0 20px;
+        @include tab {
+            padding: 60px tabSize(60) 0 tabSize(60);
+        };
         @include pc {
             padding: 50px pcSize(100) 0 pcSize(100);
         };
@@ -153,19 +164,24 @@
         }
     }
     &__button {
-        margin: 60px 0 0 tabSize(60);
+        box-sizing:border-box;
         color: $brown;
         border-radius: 20px;
-        padding: 41px 190px;
+        margin: 30px 20px 0 20px;
+        width: calc(100% - 40px);
+        height: 80px;
         @include tab {
             margin: 60px 0 0 tabSize(60);
+            width: initial;
+            height: initial;
+            padding: 41px 190px;
         };
         @include pc {
             margin: 60px 0 0 pcSize(100);
         };
     }
     &__bold {
-        margin: 60px 0 228px  tabSize(60);
+        margin: 30px 0 177px  20px;
         @include tab {
             margin: 60px 0 228px  tabSize(60);
         };
@@ -235,6 +251,7 @@
             };
         }
         &__description {
+                margin: 30px 20px 0 20px;
             @include tab {
                 margin: 60px tabSize(60) 0 tabSize(60);
             };
@@ -242,6 +259,8 @@
                 margin: 60px pcSize(100) 0 pcSize(100);
             };
             p {
+                line-height: 1.5rem;
+                padding-top: 30px;
                 @include tab {
                     padding-top: 60px;
                 };

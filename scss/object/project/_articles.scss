@@ -32,7 +32,7 @@
         position: static;
         width: 100%;
         height: auto;
-        padding: 60px tabSize(60) 0px tabSize(60);
+        padding: 30px 20px 0px 20px;
         @include tab {
             padding: 60px tabSize(60) 0px tabSize(60);
         }
@@ -40,16 +40,14 @@
             padding: 60px pcSize(100) 0px pcSize(100);
         }
         &__img {
-            @include tab {
-                width: 50%;
-                height: 50%;
-            };
+            width: 50%;
+            height: 50%;
         }
         &__text {
             &--1, &--2 {
                 line-height: 1.3rem;
-                padding-left: tabSize(21);
-                font-size: pcSize(16);
+                padding-left: 10px;
+                font-size: 16px;
                 @include tab {
                     padding-left: tabSize(21);
                 }
@@ -59,7 +57,7 @@
             }
             &--2 {
                 padding-left: 0;
-                padding-right: tabSize(21);
+                padding-right: 10px;
                 @include tab {
                     padding-right: tabSize(21);
                 }
