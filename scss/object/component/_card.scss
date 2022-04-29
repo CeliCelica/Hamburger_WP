@@ -3,13 +3,6 @@
 @use '../../foundation/variable' as *;
 
 .c-card {
-    &__img {
-        width: 100%;
-        height: auto;
-        @include tab {
-            width: 50%;
-        };
-    }
     &__text {
         width: 100%;
         font-family: $fontM1;
@@ -47,4 +40,11 @@
             };
         }
     }
+}
+.attachment-full {
+    width: 100%;
+    height: auto;
+    @include tab {
+        width: 50%;
+    };
 }

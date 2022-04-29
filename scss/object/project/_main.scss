@@ -127,7 +127,7 @@
     &__code {
         height: 237px;
         margin: 30px 20px 0 20px;
-        padding: 20px 0 0 50px;
+        padding: 50px 0 0 50px;
         background-color: #F5F5F5;
         line-height: 1.5rem;
         @include tab {
@@ -153,7 +153,7 @@
             height: 77px;
             padding: 28px 0 28px 30px;
         }
-        th {
+        td {
             font-weight: normal;
             &:nth-of-type(1) {
                 width: 30%;
@@ -162,23 +162,6 @@
                 width: 70%;
             }
         }
-    }
-    &__button {
-        box-sizing:border-box;
-        color: $brown;
-        border-radius: 20px;
-        margin: 30px 20px 0 20px;
-        width: calc(100% - 40px);
-        height: 80px;
-        @include tab {
-            margin: 60px 0 0 tabSize(60);
-            width: initial;
-            height: initial;
-            padding: 41px 190px;
-        };
-        @include pc {
-            margin: 60px 0 0 pcSize(100);
-        };
     }
     &__bold {
         margin: 30px 0 177px  20px;
@@ -239,7 +222,7 @@
             height: 500px;
         };
         &__topImages {
-            background-image: url(../images/single/pagetop_page.jpg);
+            // background-image: url(../images/single/pagetop_page.jpg);
             background-position: center;
         }
         &__topTitle {
@@ -279,3 +262,36 @@
         }
     }
 }
+.wp-block-button {
+    width: 100%;
+}
+
+.wp-block-button__link {
+    box-sizing:border-box;
+    border-radius: 20px;
+    margin: 30px 20px 0 20px;
+    padding-top: 30px;
+    width: calc(100% - 40px);
+    height: 80px;
+    @include tab {
+        margin: 60px 0 0 tabSize(60);
+        width: initial;
+        height: initial;
+        padding: 41px 190px;
+    };
+    @include pc {
+        margin: 60px 0 0 pcSize(100);
+    };
+    text-align: center;
+    font-family: $fontM1;
+    font-size: 16px;
+    font-weight: bold;
+    color: $brown;
+    border: 1px solid $gray;
+    background: -moz-linear-gradient(top, #F2EDE9, #DED8D3);
+    background: -webkit-linear-gradient(top, #F2EDE9, #DED8D3);
+    background: linear-gradient(top, #F2EDE9, #DED8D3);
+    &:hover {
+        color: $brown;
+    }
+}   

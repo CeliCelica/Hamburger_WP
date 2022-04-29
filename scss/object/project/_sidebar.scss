@@ -43,19 +43,21 @@
 
         }; 
     }
-    &___item {
-        font-family: $fontM1;
-        font-size: rem(24);
-        line-height: 85px;
-        & > a {
-            font-weight: bold;
+    &___list {
+        & > li {
+            font-family: $fontM1;
+            font-size: rem(24);
+            line-height: 85px;
+            & > a {
+                font-weight: bold;
+            }
         }
-    }
-    &___subList {
-        display: block;
-        margin-left: rem(20);
-        font-size: rem(20);
-        line-height: 43px;
+        li ul {
+            display: block;
+            margin-left: rem(20);
+            font-size: rem(20);
+            line-height: 43px;
+        }
     }
     &__blackBack {
         position: fixed;

@@ -1,30 +1,23 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <title>Hamburger page</title>
-    <meta name="description" content="オシャレで美味しいハンバーガーのお店">
-    <meta charset="UTF-8">
-    <!-- ファビコン -->
-    <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>
+<?php get_header(); ?>
 <body class="single page c-grid__container" id="js-container">
-    <header class="l-header c-grid__header u-display__header">
-        <h1 class="p-header__logo">Hamburger</h1>
-        <form class="p-form" action="サイトURL" method="get">
-            <input class="p-form__box c-button__box" type="search" name="search" placeholder=""/>
-            <input class="p-form__button c-button__button" type="submit" name="submit" value="検索" />
-        </form>
-    </header>
+<?php get_template_part('includes/header'); ?>
+<?php if (have_posts()): ?>
+    <?php while (have_posts()): the_post(); ?>
+        <?php
+            if (has_post_thumbnail()) :
+                $id = get_post_thumbnail_id();
+                $img = wp_get_attachment_image_src($id, 'full');
+            else :
+                $img = array(get_template_directory_uri() . '/images/page/pagetop_page.jpg');
+            endif;
+        ?>
     <main class="l-main c-grid__main">
-            <h1 class="p-main p-main__topImages">
-                <a class="p-main__topTitle">ショップについて</a>
-            </h1>
+        <h1 class="p-main p-main__topImages" style="background-image: url('<?php echo $img[0]; ?>');">
+            <a class="p-main__topTitle"><?php the_title(); ?></a>
+        </h1>
         <section class="p-main__description">
+        <?php the_content(); ?>
+            <!-- 
             <h2>見出しh2</h2>
             <p>Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。</p>
         </section>
@@ -126,57 +119,9 @@
             </table>
         </div>
         <button class="p-main__button c-button__button" type="button">ボタン</button>
-        <p class="p-main__bold c-text">boldboldboldboldboldboldbold</p>
+        <p class="p-main__bold c-text">boldboldboldboldboldboldbold</p> -->
     </main>
-    <nav class="l-sidebar p-sidebar c-grid__sidebar">
-        <h2 class="p-sidebar__button" id="js-sidebar__button">
-            <span class="p-sidebar__Menu">Menu</span>
-            <span class="p-sidebar__line p-sidebar__line--1"></span>
-            <span class="p-sidebar__line p-sidebar__line--2"></span>
-        </h2>
-        <div class="p-sidebar__nav">
-            <ul class="p-sidebar___list">
-                <li class="p-sidebar___item"><a href="#">バーガー</a>
-                    <ul class="p-sidebar___subList">
-                        <li><a href="#">ハンバーガー</a></li>
-                        <li><a href="#">チーズバーガー</a></li>
-                        <li><a href="#">テリヤキバーガー</a></li>
-                        <li><a href="#">アボガドバーガー</a></li>
-                        <li><a href="#">フィッシュバーガー</a></li>
-                        <li><a href="#">ベーコンバーガー</a></li>
-                        <li><a href="#">チキンバーガー</a></li>
-                    </ul>
-                </li>
-                <li class="p-sidebar___item"><a href="#">サイド</a>
-                    <ul class="p-sidebar___subList">
-                        <li><a href="#">ポテト</a></li>
-                        <li><a href="#">サラダ</a></li>
-                        <li><a href="#">ナゲット</a></li>
-                        <li><a href="#">コーン</a></li>
-                    </ul>
-                </li>
-                <li class="p-sidebar___item"><a href="#">ドリンク</a>
-                    <ul class="p-sidebar___subList">
-                        <li><a href="#">コーラ</a></li>
-                        <li><a href="#">ファンタ</a></li>
-                        <li><a href="#">オレンジ</a></li>
-                        <li><a href="#">アップル</a></li>
-                        <li><a href="#">紅茶（Ice/Hot）</a></li>
-                        <li><a href="#">コーヒー（Ice/Hot）</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="p-sidebar__blackBack" id="js-blackBack"></div>
-    </nav>
-    <footer class="l-footer p-footer c-grid__footer">
-        <ul class="p-footer__list">
-            <li>ショップ情報</li>
-            <li>ヒストリー</li>
-        </ul>
-        <p class="p-footer__copyright"><small>Copyright: RaiseTech</small></p>
-    </footer>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="css/style.js"></script>
-</body>
-</html>
+    <?php endwhile; ?>
+  <?php endif; ?>
+    <?php get_sidebar(); ?>
+    <?php get_footer(); ?>

@@ -12,8 +12,8 @@ $(function() {
   }
   toggleNav();
 
-  $(window).on('load resize', function() {
-    var heightSize = $('.js-map__height').outerHeight();
-    $('.p-map').css('height', heightSize);
-  });
+  // $(window).on('load resize', function() {
+  //   var heightSize = $('.js-map__height').outerHeight();
+  //   $('.p-map').css('height', heightSize);
+  // });
 });
