@@ -13,17 +13,18 @@
             <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
         </section>
         <?php
-        if (have_posts()) :
+            if (have_posts()) :
             while (have_posts()) :
-                the_post(); ?>
-                <figure class="p-card">
-                <?php
-  if(has_post_thumbnail()):
-    the_post_thumbnail("full");
-  else:
-?>
-<img src="<?php echo get_template_directory_uri(); ?>/images/archive/img_card.jpg" alt="" />
-<?php endif; ?>
+                the_post();
+        ?>
+        <figure class="p-card">
+        <?php
+            if(has_post_thumbnail()):
+            the_post_thumbnail("full");
+            else:
+        ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/images/archive/img_card.jpg" alt="" />
+        <?php endif; ?>
                     <div>
                         <figcaption class="p-card__textBox c-card__text">
                             <h3><?php the_title(); ?></h3>
@@ -35,9 +36,10 @@
                         </div>
                     </div>
                 </figure>
-            <?php endwhile; ?>
+        <?php endwhile; ?>
         <?php endif; ?>
         <?php wp_pagenavi(); ?>
     </main>
     <?php get_sidebar(); ?>
     <?php get_footer(); ?>
+    

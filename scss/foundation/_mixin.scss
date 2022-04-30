@@ -16,7 +16,6 @@ $header: 1400px;
       @content;
     }
 }
-
 @mixin background-rgba($rgba) {
   position: absolute;
   background-color: rgba(#000,$rgba);

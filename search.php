@@ -10,30 +10,30 @@
         </h1>
         <?php query_posts($query_string.'&posts_per_page=5'); ?>
         <?php if (have_posts()): ?>
-            <section class="p-main__description">
-           <h2>
-<?php
-  if (isset($_GET['s']) && empty($_GET['s'])) {
-    echo '検索キーワードが未入力です。';
-  } else {
-    echo ''.$_GET['s'] .'の検索結果：'.$wp_query->found_posts .'件';
-  }
-?>
-</h2>
-<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-</section>
-
-<?php
-            while (have_posts()) :
-                the_post(); ?>
-                <figure class="p-card">
-                <?php
-  if(has_post_thumbnail()):
-    the_post_thumbnail("full");
-  else:
-?>
-<img src="<?php echo get_template_directory_uri(); ?>/images/archive/img_card.jpg" alt="" />
-<?php endif; ?>
+          <section class="p-main__description">
+            <h2>
+              <?php
+                if (isset($_GET['s']) && empty($_GET['s'])) {
+                  echo '検索キーワードが未入力です。';
+                } else {
+                  echo ''.$_GET['s'] .'の検索結果：'.$wp_query->found_posts .'件';
+                }
+              ?>
+            </h2>
+            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            </section>
+            <?php
+              while (have_posts()) :
+              the_post();
+            ?>
+            <figure class="p-card">
+            <?php
+              if(has_post_thumbnail()):
+                the_post_thumbnail("full");
+              else:
+            ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/archive/img_card.jpg" alt="" />
+            <?php endif; ?>
                     <div>
                         <figcaption class="p-card__textBox c-card__text">
                             <h3><?php the_title(); ?></h3>

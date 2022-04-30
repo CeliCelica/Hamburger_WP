@@ -20,13 +20,10 @@
     }
     img {
         padding: 20px 20px 0 20px;
-
         @include tab {
-        //     width: calc((100% - 16px * 1) / 2);
             padding: 0;
         }
         @include pc {
-            // width: calc((100% - 20px * 2) / 3);
         }
     }
     &__only {
