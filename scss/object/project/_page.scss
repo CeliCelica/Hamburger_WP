@@ -2,72 +2,91 @@
 @use '../../foundation/mixin' as *;
 @use '../../foundation/variable' as *;
 
-.p-page {
+.wp-pagenavi {
+    @media (max-width: 599px) {
+    position: relative;
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 20px 30px;
+    height: 122px
+    }
     font-family: $fontM1;
     font-size: 16px;
     color: $gray;
     @include tab {
-        width: auto;
-        margin: 0 auto;
+        clear: both;
+        text-align:center;
         font-family: $fontRobo;
-        margin-top: 75.5px;
+        margin: 105.5px 0 30px 0;
         border-collapse: separate;
         border-spacing: tabSize(15) 30px;
     };
     @include pc {
-        margin-top: 86px;
+        margin: 150px 0 64px 0;
         border-spacing: tabSize(15) 64px;
     };
-    td {
-        vertical-align: middle;
-        @include tab {
-            &:nth-of-type(3) {
-                background-color: #3C2B1C;
-                color: #fff;
-            }
-        };
-        a {
-            @include tab {
-                display: block;
-                text-align: center;
-                width: 35px;
-                height: 35px;
-                line-height: 35px;
-            }; 
-            span {
-                font-size: 16px;
-                padding:0 7.3px;
-                vertical-align: middle;
-                @include tab {
-                    display: none;
-                };
-            }
+}
+.pages {
+    @media (max-width: 599px) {
+        display: none;
+    }
+    margin-right: 20px;
+}
+.wp-pagenavi .current,
+.wp-pagenavi a.page {
+    @media (max-width: 599px) {
+        display: none;
+    }
+    @include tab {
+        color: #4a4a4a;
+        background-color: #FFF;
+        border: 1px solid $gray;
+        padding: 8px 15px;
+        margin: 0 8px;
+        white-space: nowrap;
+        text-align: center;
+        text-decoration:none;
+    };
+}
+.wp-pagenavi a.page:hover{
+	border: 1px solid $gray;
+
+    background-color: #3C2B1C;
+    color: #fff;
+    }
+.wp-pagenavi span.current{
+	border: 1px solid $gray;
+    background-color: #3C2B1C;
+    color: #fff;
+}
+.previouspostslink, .nextpostslink {
+    @media (max-width: 599px) {
+        position: absolute;
+        font-size: 16px;
+        bottom: 30px;
+    }
+    font-size: 0px;
+}
+.previouspostslink {
+    @media (max-width: 599px) {
+        margin-left: 20px;
+    }
+    margin-right: 17px;
+    @include tab {
+        &:before{
+            content:'«';
+            font-size: 35px;
         }
+    };
+}
+.nextpostslink {
+    @media (max-width: 599px) {
+        right: 0;
+        margin-right: 20px;
     }
-    &__pageNumber {
-        @media (max-width: 599px) {
-            display: none;
+    margin-left: 17px;
+    @include tab {
+        &:before{
+            content:'»';
+            font-size: 35px;
         }
-        @media (max-width: 610px) {
-            font-size: 14px;
-        }
-    }
-    &__number {
-        @media (max-width: 599px) {
-            display: none;
-        }
-        @include tab {
-            border: 1px solid $gray;
-            background-color: #fff;
-        }; 
-    }
-    &__prev, &__next {
-        font-size: 30px;
-    }
-    &__next {
-        text-align: right;
-    }
+    };
 }

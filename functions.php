@@ -69,3 +69,12 @@ function change_old( $query ) {
     $query->set('orderby', 'date' );
 }
 add_action( 'pre_get_posts', 'change_old' );
+
+//　検索結果のタイトルをカスタマイズ
+function wp_search_title($search_title){
+    if(is_search()){
+      $search_title = ''.get_search_query().'';
+    }
+    return $search_title;
+  }
+  add_filter('wp_title','wp_search_title');

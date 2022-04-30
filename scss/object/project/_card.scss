@@ -56,9 +56,10 @@
     }
     img {
         width: 100%;
-        height: auto;
+        height: 293px;
         @include tab {
             width: 50%;
+            height: auto;
         };
     }
 }
