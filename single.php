@@ -17,6 +17,7 @@
                     <a class="p-main__topTitle"><?php the_title(); ?></a>
                 </h1>
                 <?php the_content(); ?>
+                <?php wp_link_pages(); ?>
             </main>
         <?php endwhile; ?>
     <?php endif; ?>

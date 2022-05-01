@@ -1,12 +1,13 @@
 <?php get_header(); ?>
-<body class="c-grid__container" id="js-container">
+<body class="c-grid__container" id="js-container"<?php body_class(); ?>>
+<?php wp_body_open(); ?>
 <?php get_template_part('includes/header'); ?>
     <main class="l-main c-grid__main">
         <h2 class="p-main p-main__topImages">
             <a class="p-main__topTitle">ダミーサイト</a>
         </h2>
         <div class="u-display__article">
-            <article class="p-article p-article__takeOut u-margin__takeOut">
+            <article <?php post_class('p-article p-article__takeOut u-margin__takeOut'); ?>>
                 <h3 class="c-media__mainTitle u-margin__mainTitle">Take Out</h3>
                 <div class="u-position__textBox">
                     <section class="c-media__textBox u-margin__textBox">

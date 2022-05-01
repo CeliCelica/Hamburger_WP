@@ -23,7 +23,7 @@
             the_post_thumbnail("full");
             else:
         ?>
-        <img src="<?php echo get_template_directory_uri(); ?>/images/archive/img_card.jpg" alt="" />
+        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/archive/img_card.jpg' ); ?>" alt="" />
         <?php endif; ?>
                     <div>
                         <figcaption class="p-card__textBox c-card__text">
