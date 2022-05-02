@@ -688,25 +688,22 @@ body {
     padding-right: clamp(29px,2.857vw,40px);
   }
 }
-
 @media (max-width: 599px) {
-  .p-article {
+  .single .p-article {
     display: flex;
   }
-
-  .p-article:nth-of-type(2) {
+  .single .p-article:nth-of-type(2) {
     flex-direction: row-reverse;
   }
-
-  .wp-block-media-text__content {
+  .single .wp-block-media-text__content {
     width: 50%;
     height: 50%;
   }
-
-  .wp-block-media-text .wp-block-media-text__content {
+  .single .wp-block-media-text .wp-block-media-text__content {
     padding: 0;
   }
 }
+
 .p-card {
   background-color: #3C2B1C;
   margin: 0 22px 20.9px 22px;

@@ -146,7 +146,7 @@
             padding: 50px pcSize(100) 0 pcSize(100);
         };
         table {
-        width: 100%;
+            width: 100%;
         }
         th, td {
             border: solid 1px $gray;
@@ -293,4 +293,4 @@
     &:hover {
         color: $brown;
     }
-}   
+}

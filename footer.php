@@ -1,5 +1,3 @@
-<!-- <?php if (!is_front_page()) : ?>
-    <?php endif; ?> -->
 <footer class="l-footer p-footer c-grid__footer">
   <?php
   wp_nav_menu(
