@@ -64,3 +64,29 @@ function wp_search_title($search_title){
     return $search_title;
   }
   add_filter('wp_title','wp_search_title');
+
+
+
+
+//カード部分の取得
+function get_h2() {
+    global $post;
+    if(preg_match('/<h2>.+<\/h2>/u', $post->post_content, $match)){
+        echo $match[0];
+    } else {
+        echo "<h2>Sorry no text</h2>";
+    }
+}
+function get_p() {
+    global $post;
+    if(preg_match('/<p>.+<\/p>/u', $post->post_content, $match)){
+        echo $match[0];
+    } else {
+        echo "<p>Sorry no text</p>";
+    }
+}
+
+
+
+
+

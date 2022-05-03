@@ -5,6 +5,7 @@
 .p-card {
     background-color: #3C2B1C;
     margin: 0 22px 20.9px 22px;
+    // width: 1000px;
     @include tab {
         display: flex;
         margin: 0 tabSize(43) 20.5px tabSize(43);
@@ -13,31 +14,39 @@
         margin: 0 cardSize(100) 30px cardSize(100);
     };
     &__textBox {
+        width: 100%;
+        padding: 0 17px;
+        @include tab {
+            padding: 0 tabSize(34.7);
+        };
+        @include pc {
+            padding: 0 cardSize(63);
+        };
         h3 {
-            padding: 31.5px 0 0 17px;
+            padding-top: 31.5px;
             @include tab {
-                padding: tabSize(30) 0 0 tabSize(34.7);
+                padding-top: tabSize(30);
             };
             @include pc {
-                padding: cardSize(53) 0 0 cardSize(63);
+                padding-top: cardSize(53);
             };
         }
-        h4 {
-            padding: 24px 0 0 17px;
+        h2 {
+            padding-top: 24px;
             @include tab {
-                padding: tabSize(24) 0 0 tabSize(34.7);
+                padding-top: tabSize(24);
             };
             @include pc {
-                padding: cardSize(47) 0 0 cardSize(63);
+                padding-top: cardSize(47);
             };
         }
         p {
-            padding: 10px 17px 0 17px;
+            padding: 10px 0 0 0;
             @include tab {
-                padding: rem(10) tabSize(34.7) 0 tabSize(34.7);
+                padding: rem(10) 0 0 0;
                 };
             @include pc {
-                padding: cardSize(17) cardSize(63) 0 cardSize(63);
+                padding: cardSize(17) 0 0 0;
             };
         }
     }

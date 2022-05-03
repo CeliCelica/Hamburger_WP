@@ -37,8 +37,8 @@
                     <div>
                         <figcaption class="p-card__textBox c-card__text">
                             <h3><?php the_title(); ?></h3>
-                            <h4>小見出しが入ります</h4>
-                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                            <h4><?php get_h2(); ?></h4>
+                            <p><?php get_p(); ?></p>
                         </figcaption>
                         <div class="u-position__card">
                             <a class="p-card__link c-button__button" href="<?php the_permalink(); ?>">詳しく見る</a>
